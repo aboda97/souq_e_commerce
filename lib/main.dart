@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:souq_app/features/splash_feature/presentation/views/splash_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const SouqApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SouqApp extends StatelessWidget {
+  const SouqApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Souq',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: Text('data'),
-    );
+    return MaterialApp(home: SplashView());
   }
 }
