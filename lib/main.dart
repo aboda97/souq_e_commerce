@@ -27,7 +27,7 @@ class SouqApp extends StatelessWidget {
       child: BlocBuilder<LanguageCubit, LanguageState>(
         builder: (context, state) {
           return MaterialApp(
-            locale: Locale('en'),
+            locale: state.locale,
             debugShowCheckedModeBanner: false,
             localizationsDelegates: [
               S.delegate,

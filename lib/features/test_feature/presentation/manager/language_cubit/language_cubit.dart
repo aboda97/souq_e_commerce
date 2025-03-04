@@ -13,7 +13,8 @@ class LanguageCubit extends Cubit<LanguageState> {
         state.locale.languageCode == 'en'
             ? const Locale('ar')
             : const Locale('en');
-    await _prefs.setString('language_code', newLocale.languageCode);
+    await _prefs.setString('language_code',
+    newLocale.languageCode);
     emit(LanguageChanged(newLocale));
   }
 

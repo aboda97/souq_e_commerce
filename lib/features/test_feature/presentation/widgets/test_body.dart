@@ -29,7 +29,7 @@ class TestViewBody extends StatelessWidget {
       ),
       body: BlocBuilder<LanguageCubit, LanguageState>(
         builder: (context, state) {
-          return Text(S.of(context).body);
+          return Center(child: Text(S.of(context).body));
         },
       ),
     );
