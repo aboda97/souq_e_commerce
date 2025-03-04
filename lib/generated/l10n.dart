@@ -64,6 +64,16 @@ class S {
       args: [],
     );
   }
+
+  /// ` Welcome to Flutter Localization Demo`
+  String get body {
+    return Intl.message(
+      ' Welcome to Flutter Localization Demo',
+      name: 'body',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
