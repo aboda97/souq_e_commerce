@@ -3,7 +3,7 @@ import 'package:souq_app/features/splash_feature/presentation/widgets/splash_vie
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
-
+  static const String routeName = 'SplashView';
   @override
   Widget build(BuildContext context) {
     return SplashViewBody();
