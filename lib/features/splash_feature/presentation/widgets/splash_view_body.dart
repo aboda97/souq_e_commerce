@@ -14,7 +14,7 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
-    executionPushReplacmentNamedNavigator(context, OnBoardingView.routeName, 3);
+    executionPushReplacmentNamedNavigator(context, OnBoardingView.routeName, 2);
     super.initState();
   }
 
