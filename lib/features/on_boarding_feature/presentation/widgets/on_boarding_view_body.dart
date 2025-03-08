@@ -1,7 +1,12 @@
+import 'package:dots_indicator/dots_indicator.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:souq_app/features/on_boarding_feature/presentation/manager/on_boarding_manage.dart';
-import 'package:souq_app/features/on_boarding_feature/presentation/widgets/build_on_boarding_view.dart';
-import 'package:souq_app/features/on_boarding_feature/presentation/widgets/build_view_indicator.dart';
+import 'package:flutter/widgets.dart';
+import 'package:souq_app/core/components/custom_btn.dart';
+import 'package:souq_app/core/utils/app_colors.dart';
+import 'package:souq_app/features/on_boarding_feature/presentation/widgets/on_boarding_page_view.dart';
+import 'package:souq_app/features/test_feature/presentation/views/test.dart';
+
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -11,56 +16,71 @@ class OnBoardingViewBody extends StatefulWidget {
 }
 
 class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
-  final OnBoardingManage onBoardingManage = OnBoardingManage();
+  late PageController pageController;
 
+  var currentPage = 0;
   @override
   void initState() {
-    super.initState();
-    onBoardingManage.pageController.addListener(() {
-      setState(() {
-        onBoardingManage.currentIndex =
-            onBoardingManage.pageController.page?.round() ?? 0;
-      });
+    pageController = PageController();
+
+    pageController.addListener(() {
+      currentPage = pageController.page!.round();
+      setState(() {});
     });
+    super.initState();
   }
 
+  @override
   void dispose() {
-    onBoardingManage.dispose();
+    pageController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            child: PageView.builder(
-              controller: onBoardingManage.pageController,
-              itemCount: onBoardingManage.pages.length,
-              itemBuilder: (context, index) {
-                return buildOnBoardingView(onBoardingManage.pages[index]);
+    return Column(
+      children: [
+        Expanded(
+          child: OnBoardingPageView(
+            pageController: pageController,
+          ),
+        ),
+        DotsIndicator(
+          dotsCount: 2,
+          decorator: DotsDecorator(
+            activeColor: AppColors.primaryColor,
+            color: currentPage == 1
+                ? AppColors.primaryColor
+                : AppColors.primaryColor.withOpacity(.5),
+          ),
+        ),
+        const SizedBox(
+          height: 29,
+        ),
+        Visibility(
+          visible: currentPage == 1 ? true : false,
+          maintainSize: true,
+          maintainAnimation: true,
+          maintainState: true,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+            ),
+            child: CustomButton(
+              onPressed: () {
+              //  Prefs.setBool(kIsOnBoardingViewSeen, true);
+                Navigator.of(context).pushReplacementNamed(
+                  TestView.routeName,
+                );
               },
+              text: 'ابدأ الان',
             ),
           ),
-          buildViewIndicator(),
-          _buildNextButton(),
-          const SizedBox(height: 20),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildNextButton() {
-    return ElevatedButton(
-      onPressed: () {
-        onBoardingManage.nextPage(context);
-      },
-      child: Text(
-        onBoardingManage.currentIndex < onBoardingManage.pages.length - 1
-            ? "Next"
-            : "Get Started",
-      ),
+        ),
+        const SizedBox(
+          height: 43,
+        ),
+      ],
     );
   }
 }
