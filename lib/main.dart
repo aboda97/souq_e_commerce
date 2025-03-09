@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:souq_app/core/helper_functions/on_generate_route_func.dart';
+import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/service_locator.dart';
 import 'package:souq_app/features/splash_feature/presentation/views/splash_view.dart';
 import 'package:souq_app/features/test_feature/presentation/manager/language_cubit/language_cubit.dart';
@@ -10,6 +11,7 @@ import 'package:souq_app/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreferencesService.init();
   await setupLocator(); // Ensure dependencies are set up before running the app
   final languageCubit = locator<LanguageCubit>();
   languageCubit.loadSavedLanguage(); // Load saved language preference
