@@ -41,6 +41,9 @@ class SouqApp extends StatelessWidget {
       child: BlocBuilder<LanguageCubit, LanguageState>(
         builder: (context, state) {
           return MaterialApp(
+            theme: ThemeData(
+              fontFamily: 'Cairo',
+            ),
             locale: state.locale,
             debugShowCheckedModeBanner: false,
             localizationsDelegates: [
