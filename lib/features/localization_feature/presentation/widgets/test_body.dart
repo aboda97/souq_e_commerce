@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:souq_app/features/test_feature/presentation/manager/language_cubit/language_cubit.dart';
-import 'package:souq_app/features/test_feature/presentation/manager/language_cubit/language_state.dart';
+import 'package:souq_app/features/localization_feature/presentation/manager/language_cubit/language_cubit.dart';
+import 'package:souq_app/features/localization_feature/presentation/manager/language_cubit/language_state.dart';
 import 'package:souq_app/generated/l10n.dart';
 
 class TestViewBody extends StatelessWidget {

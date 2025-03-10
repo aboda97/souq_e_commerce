@@ -74,6 +74,56 @@ class S {
       args: [],
     );
   }
+
+  /// `تخط`
+  String get skip {
+    return Intl.message('تخط', name: 'skip', desc: '', args: []);
+  }
+
+  /// `ابدأ الان`
+  String get startNow {
+    return Intl.message('ابدأ الان', name: 'startNow', desc: '', args: []);
+  }
+
+  /// `مرحبًا بك في`
+  String get onBoardingTitle1 {
+    return Intl.message(
+      'مرحبًا بك في',
+      name: 'onBoardingTitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.`
+  String get onBoardingDesc1 {
+    return Intl.message(
+      'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
+      name: 'onBoardingDesc1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ابحث وتسوق`
+  String get onBoardingTitle2 {
+    return Intl.message(
+      'ابحث وتسوق',
+      name: 'onBoardingTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية`
+  String get onBoardingDesc2 {
+    return Intl.message(
+      'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية',
+      name: 'onBoardingDesc2',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

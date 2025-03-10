@@ -5,7 +5,7 @@ import 'package:souq_app/core/components/excution_navigator.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/assets_paths.dart';
 import 'package:souq_app/features/on_boarding_feature/presentation/views/on_boarding_view.dart';
-import 'package:souq_app/features/test_feature/presentation/views/test.dart';
+import 'package:souq_app/features/localization_feature/presentation/views/test.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -17,11 +17,17 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
-    bool isOnBoardingViewSeen = SharedPreferencesService.getBool(kIsOnBoardingViewSeen);
-    if(isOnBoardingViewSeen){
+    bool isOnBoardingViewSeen = SharedPreferencesService.getBool(
+      kIsOnBoardingViewSeen,
+    );
+    if (isOnBoardingViewSeen) {
       executionPushReplacmentNamedNavigator(context, TestView.routeName, 2);
-    }else{
-      executionPushReplacmentNamedNavigator(context, OnBoardingView.routeName, 2);
+    } else {
+      executionPushReplacmentNamedNavigator(
+        context,
+        OnBoardingView.routeName,
+        2,
+      );
     }
     super.initState();
   }

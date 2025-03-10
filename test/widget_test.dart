@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:souq_app/core/utils/service_locator.dart';
-import 'package:souq_app/features/test_feature/presentation/manager/language_cubit/language_cubit.dart';
+import 'package:souq_app/features/localization_feature/presentation/manager/language_cubit/language_cubit.dart';
 
 import 'package:souq_app/main.dart';
 
