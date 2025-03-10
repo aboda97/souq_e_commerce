@@ -12,7 +12,5 @@ Future<void> setupLocator() async {
   );
 
   // Register LanguageCubit with SharedPreferences injected
-  serviceLocator.registerLazySingleton<LanguageCubit>(
-    () => LanguageCubit(serviceLocator<SharedPreferences>()),
-  );
+  serviceLocator.registerLazySingleton<LanguageCubit>(() => LanguageCubit());
 }

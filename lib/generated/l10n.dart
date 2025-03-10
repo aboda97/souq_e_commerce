@@ -75,14 +75,14 @@ class S {
     );
   }
 
-  /// `تخط`
+  /// `Skip`
   String get skip {
-    return Intl.message('تخط', name: 'skip', desc: '', args: []);
+    return Intl.message('Skip', name: 'skip', desc: '', args: []);
   }
 
-  /// `ابدأ الان`
+  /// `Start Now`
   String get startNow {
-    return Intl.message('ابدأ الان', name: 'startNow', desc: '', args: []);
+    return Intl.message('Start Now', name: 'startNow', desc: '', args: []);
   }
 
   /// `مرحبًا بك في`

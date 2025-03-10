@@ -33,8 +33,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "onBoardingTitle1": MessageLookupByLibrary.simpleMessage("مرحبًا بك في"),
     "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
-    "skip": MessageLookupByLibrary.simpleMessage("تخط"),
-    "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
+    "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
     "title": MessageLookupByLibrary.simpleMessage("Flutter Localization Demo"),
   };
 }
