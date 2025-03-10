@@ -20,7 +20,7 @@ class OnBoardingPageView extends StatelessWidget {
           isVisible: true,
           image: AssetsPaths.onBoardingImgOnePath,
           backgroundImage: AssetsPaths.bgOnBoardingImgOnePath,
-          subtitle: S.of(context).onBoardingDesc1,
+          description: S.of(context).onBoardingDesc1,
 
           //'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
           title: Row(
@@ -50,7 +50,7 @@ class OnBoardingPageView extends StatelessWidget {
           isVisible: false,
           image: AssetsPaths.onBoardingImgTwoPath,
           backgroundImage: AssetsPaths.bgOnBoardingImgTwoPath,
-          subtitle:
+          description:
               // 'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية',
               S.of(context).onBoardingDesc2,
           title: Text(

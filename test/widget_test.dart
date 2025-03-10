@@ -14,7 +14,7 @@ import 'package:souq_app/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    final languageCubit = locator<LanguageCubit>();
+    final languageCubit = serviceLocator<LanguageCubit>();
 
     // Build our app and trigger a frame.
     await tester.pumpWidget(SouqApp(languageCubit: languageCubit));

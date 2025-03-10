@@ -13,7 +13,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPreferencesService.init();
   await setupLocator(); // Ensure dependencies are set up before running the app
-  final languageCubit = locator<LanguageCubit>();
+  final languageCubit = serviceLocator<LanguageCubit>();
   languageCubit.loadSavedLanguage(); // Load saved language preference
 
   runApp(SouqApp(languageCubit: languageCubit));

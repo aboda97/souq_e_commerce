@@ -8,6 +8,7 @@ import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/app_colors.dart';
 import 'package:souq_app/features/on_boarding_feature/presentation/widgets/on_boarding_page_view.dart';
 import 'package:souq_app/features/localization_feature/presentation/views/test.dart';
+import 'package:souq_app/generated/l10n.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -65,7 +66,8 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 SharedPreferencesService.setBool(kIsOnBoardingViewSeen, true);
                 Navigator.of(context).pushReplacementNamed(TestView.routeName);
               },
-              text: 'ابدأ الان',
+              text: //'ابدأ الان',
+                  S.of(context).startNow,
             ),
           ),
         ),

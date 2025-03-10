@@ -6,19 +6,20 @@ import 'package:souq_app/constants.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/app_styles.dart';
 import 'package:souq_app/features/localization_feature/presentation/views/test.dart';
+import 'package:souq_app/generated/l10n.dart';
 
 class PageviewItem extends StatelessWidget {
   const PageviewItem({
     super.key,
     required this.image,
     required this.backgroundImage,
-    required this.subtitle,
+    required this.description,
     required this.title,
     required this.isVisible,
   });
 
   final String image, backgroundImage;
-  final String subtitle;
+  final String description;
   final Widget title;
 
   final bool isVisible;
@@ -56,7 +57,8 @@ class PageviewItem extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(16),
                     child: Text(
-                      'تخط',
+                      //'تخط',
+                      S.of(context).skip,
                       style: TextStyles.regular13.copyWith(
                         color: const Color(0xFF949D9E),
                       ),
@@ -73,7 +75,7 @@ class PageviewItem extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 37),
           child: Text(
-            subtitle,
+            description,
             textAlign: TextAlign.center,
             style: TextStyles.semiBold13.copyWith(
               color: const Color(0xFF4E5456),
