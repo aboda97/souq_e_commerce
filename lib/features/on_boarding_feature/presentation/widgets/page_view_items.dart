@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:souq_app/constants.dart';
+import 'package:souq_app/core/components/excution_navigator.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/app_styles.dart';
 import 'package:souq_app/features/localization_feature/presentation/views/test.dart';
@@ -49,15 +50,15 @@ class PageviewItem extends StatelessWidget {
                       kIsOnBoardingViewSeen,
                       true,
                     );
-
-                    Navigator.of(
+                    executionPushReplacmentNamedNavigator(
                       context,
-                    ).pushReplacementNamed(TestView.routeName);
+                      TestView.routeName,
+                      2,
+                    );
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(16),
                     child: Text(
-                      //'تخط',
                       S.of(context).skip,
                       style: TextStyles.regular13.copyWith(
                         color: const Color(0xFF949D9E),

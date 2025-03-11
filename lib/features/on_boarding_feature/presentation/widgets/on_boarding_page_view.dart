@@ -3,7 +3,6 @@ import 'package:souq_app/core/utils/app_colors.dart';
 import 'package:souq_app/core/utils/app_styles.dart';
 import 'package:souq_app/core/utils/assets_paths.dart';
 import 'package:souq_app/features/on_boarding_feature/presentation/widgets/page_view_items.dart';
-
 import '../../../../generated/l10n.dart';
 
 class OnBoardingPageView extends StatelessWidget {
@@ -22,15 +21,10 @@ class OnBoardingPageView extends StatelessWidget {
           backgroundImage: AssetsPaths.bgOnBoardingImgOnePath,
           description: S.of(context).onBoardingDesc1,
 
-          //'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                //'مرحبًا بك في',
-                S.of(context).onBoardingTitle1,
-                style: TextStyles.bold23,
-              ),
+              Text(S.of(context).onBoardingTitle1, style: TextStyles.bold23),
               Text(
                 '  HUB',
                 style: TextStyles.bold23.copyWith(
@@ -50,11 +44,8 @@ class OnBoardingPageView extends StatelessWidget {
           isVisible: false,
           image: AssetsPaths.onBoardingImgTwoPath,
           backgroundImage: AssetsPaths.bgOnBoardingImgTwoPath,
-          description:
-              // 'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية',
-              S.of(context).onBoardingDesc2,
+          description: S.of(context).onBoardingDesc2,
           title: Text(
-            //'ابحث وتسوق',
             S.of(context).onBoardingTitle2,
             textAlign: TextAlign.center,
             style: TextStyle(
