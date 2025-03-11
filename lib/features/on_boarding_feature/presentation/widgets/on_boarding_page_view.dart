@@ -26,7 +26,7 @@ class OnBoardingPageView extends StatelessWidget {
             children: [
               Text(S.of(context).onBoardingTitle1, style: TextStyles.bold23),
               Text(
-                '  HUB',
+                ' HUB',
                 style: TextStyles.bold23.copyWith(
                   color: AppColors.secondaryColor,
                 ),
