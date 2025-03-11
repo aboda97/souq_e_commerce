@@ -7,17 +7,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:souq_app/core/utils/service_locator.dart';
-import 'package:souq_app/features/localization_feature/presentation/manager/language_cubit/language_cubit.dart';
 
 import 'package:souq_app/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    final languageCubit = serviceLocator<LanguageCubit>();
-
     // Build our app and trigger a frame.
-    await tester.pumpWidget(SouqApp(languageCubit: languageCubit));
+    await tester.pumpWidget(SouqApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

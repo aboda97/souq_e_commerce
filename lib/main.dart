@@ -13,28 +13,23 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPreferencesService.init();
   await setupLocator(); // Ensure dependencies are set up before running the app
-  final languageCubit = serviceLocator<LanguageCubit>();
-  languageCubit.loadSavedLanguage(); // Load saved language preference
-
-  runApp(SouqApp(languageCubit: languageCubit));
+  runApp(SouqApp());
 }
 
 class SouqApp extends StatelessWidget {
-  final LanguageCubit languageCubit;
-
-  const SouqApp({super.key, required this.languageCubit});
+  const SouqApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider.value(
-      value: languageCubit,
+    return BlocProvider(
+      create: (context) => serviceLocator<LanguageCubit>()..loadSavedLanguage(),
       child: BlocBuilder<LanguageCubit, LanguageState>(
         builder: (context, state) {
           return MaterialApp(
             theme: ThemeData(fontFamily: 'Cairo'),
-            locale: state.locale,
+            locale: state.locale, //Locale('en'),
             debugShowCheckedModeBanner: false,
-            localizationsDelegates: [
+            localizationsDelegates: const [
               S.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
