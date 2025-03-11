@@ -9,7 +9,7 @@ class LanguageCubit extends Cubit<LanguageState> {
   Future<void> toggleLanguage() async {
     final newLocale =
         state.locale.languageCode == kArabicLang
-            ? const Locale(kEnglishLanng)
+            ? const Locale(kEnglishLang)
             : const Locale(kArabicLang);
     await SharedPreferencesService.setString(
       kAppLanguage,
