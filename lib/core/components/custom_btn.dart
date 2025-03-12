@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:souq_app/core/utils/app_colors.dart';
 import 'package:souq_app/core/utils/app_styles.dart';
-
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.onPressed, required this.text});
@@ -16,18 +14,14 @@ class CustomButton extends StatelessWidget {
       child: TextButton(
         style: TextButton.styleFrom(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              16,
-            ),
+            borderRadius: BorderRadius.circular(16),
           ),
           backgroundColor: AppColors.primaryColor,
         ),
         onPressed: onPressed,
         child: Text(
           text,
-          style: TextStyles.bold16.copyWith(
-            color: Colors.white,
-          ),
+          style: TextStyles.bold16.copyWith(color: Colors.white),
         ),
       ),
     );
