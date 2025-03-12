@@ -26,13 +26,13 @@ class MessageLookup extends MessageLookupByLibrary {
       " Welcome to Flutter Localization Demo",
     ),
     "onBoardingDesc1": MessageLookupByLibrary.simpleMessage(
-      "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
+      "Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.",
     ),
     "onBoardingDesc2": MessageLookupByLibrary.simpleMessage(
-      "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
+      "We offer you the finest, carefully selected fruits. Check out the details, photos, and reviews to make sure you\'re choosing the perfect fruit.",
     ),
-    "onBoardingTitle1": MessageLookupByLibrary.simpleMessage("مرحبًا بك في"),
-    "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+    "onBoardingTitle1": MessageLookupByLibrary.simpleMessage("Welcome to"),
+    "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("Search and shop"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
     "title": MessageLookupByLibrary.simpleMessage("Flutter Localization Demo"),

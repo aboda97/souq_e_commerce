@@ -85,40 +85,40 @@ class S {
     return Intl.message('Start Now', name: 'startNow', desc: '', args: []);
   }
 
-  /// `مرحبًا بك في`
+  /// `Welcome to`
   String get onBoardingTitle1 {
     return Intl.message(
-      'مرحبًا بك في',
+      'Welcome to',
       name: 'onBoardingTitle1',
       desc: '',
       args: [],
     );
   }
 
-  /// `اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.`
+  /// `Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.`
   String get onBoardingDesc1 {
     return Intl.message(
-      'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
+      'Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.',
       name: 'onBoardingDesc1',
       desc: '',
       args: [],
     );
   }
 
-  /// `ابحث وتسوق`
+  /// `Search and shop`
   String get onBoardingTitle2 {
     return Intl.message(
-      'ابحث وتسوق',
+      'Search and shop',
       name: 'onBoardingTitle2',
       desc: '',
       args: [],
     );
   }
 
-  /// `نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية`
+  /// `We offer you the finest, carefully selected fruits. Check out the details, photos, and reviews to make sure you're choosing the perfect fruit.`
   String get onBoardingDesc2 {
     return Intl.message(
-      'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية',
+      'We offer you the finest, carefully selected fruits. Check out the details, photos, and reviews to make sure you\'re choosing the perfect fruit.',
       name: 'onBoardingDesc2',
       desc: '',
       args: [],
