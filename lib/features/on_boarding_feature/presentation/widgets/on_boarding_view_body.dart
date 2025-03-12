@@ -8,7 +8,7 @@ import 'package:souq_app/core/components/excution_navigator.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/app_colors.dart';
 import 'package:souq_app/features/on_boarding_feature/presentation/widgets/on_boarding_page_view.dart';
-import 'package:souq_app/features/localization_feature/presentation/views/test.dart';
+import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 import 'package:souq_app/generated/l10n.dart';
 
 class OnBoardingViewBody extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:souq_app/features/on_boarding_feature/presentation/views/on_boarding_view.dart';
 import 'package:souq_app/features/splash_feature/presentation/views/splash_view.dart';
-import 'package:souq_app/features/localization_feature/presentation/views/test.dart';
+import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {

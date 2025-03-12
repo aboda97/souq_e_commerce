@@ -6,7 +6,7 @@ import 'package:souq_app/core/helper_functions/localization_lan_checker.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/assets_paths.dart';
 import 'package:souq_app/features/on_boarding_feature/presentation/views/on_boarding_view.dart';
-import 'package:souq_app/features/localization_feature/presentation/views/test.dart';
+import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

@@ -6,7 +6,7 @@ import 'package:souq_app/constants.dart';
 import 'package:souq_app/core/components/excution_navigator.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/app_styles.dart';
-import 'package:souq_app/features/localization_feature/presentation/views/test.dart';
+import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 import 'package:souq_app/generated/l10n.dart';
 
 class PageviewItem extends StatelessWidget {
