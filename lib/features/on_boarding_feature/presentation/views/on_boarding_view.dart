@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:souq_app/core/components/toggle_language.dart';
 import 'package:souq_app/features/on_boarding_feature/presentation/widgets/on_boarding_view_body.dart';
 
 class OnBoardingView extends StatelessWidget {
@@ -9,8 +8,7 @@ class OnBoardingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(actions: [ToggleLanguage()]),
-      body: const OnBoardingViewBody(),
+      body: SafeArea(child: const OnBoardingViewBody()),
     );
   }
 }

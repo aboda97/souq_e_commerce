@@ -10,8 +10,8 @@ class CustomTextFormField extends StatelessWidget {
   final bool obscureText;
   final String? Function(String?)? validator;
   final Function()? onSuffixTap;
-  final bool readOnly;
-  final Function()? onTap;
+  //final bool readOnly;
+  final void Function(String?)? onSaved;
 
   const CustomTextFormField({
     super.key,
@@ -24,8 +24,8 @@ class CustomTextFormField extends StatelessWidget {
     this.obscureText = false,
     this.validator,
     this.onSuffixTap,
-    this.readOnly = false,
-    this.onTap,
+    //  this.readOnly = false,
+    this.onSaved,
   });
 
   @override
@@ -35,9 +35,11 @@ class CustomTextFormField extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: obscureText,
       validator: validator,
-      readOnly: readOnly,
-      onTap: onTap,
+      //    readOnly: readOnly,
+      onSaved: onSaved,
       decoration: InputDecoration(
+        filled: true,
+        fillColor: const Color(0xFFF9FAFA),
         hintText: hintText,
         labelText: labelText,
         prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
@@ -46,7 +48,8 @@ class CustomTextFormField extends StatelessWidget {
                 ? GestureDetector(onTap: onSuffixTap, child: Icon(suffixIcon))
                 : null,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
-        contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
+
+        contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
       ),
     );
   }

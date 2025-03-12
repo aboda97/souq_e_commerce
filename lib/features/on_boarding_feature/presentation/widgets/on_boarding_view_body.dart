@@ -7,8 +7,8 @@ import 'package:souq_app/core/components/custom_btn.dart';
 import 'package:souq_app/core/components/excution_navigator.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/app_colors.dart';
+import 'package:souq_app/features/authentication_feature/presentation/views/login_view.dart';
 import 'package:souq_app/features/on_boarding_feature/presentation/widgets/on_boarding_page_view.dart';
-import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 import 'package:souq_app/generated/l10n.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -67,7 +67,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 SharedPreferencesService.setBool(kIsOnBoardingViewSeen, true);
                 executionPushReplacmentNamedNavigator(
                   context,
-                  TestView.routeName,
+                  LoginView.routeName,
                   2,
                 );
               },

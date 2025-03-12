@@ -12,6 +12,7 @@
     "signIn": "Sign In",
     "signUp": "Sign Up",
     "userEmail": "Email",
+    "fieldRequired":"This Field is Required",
     "userPassword": "Password",
     "newUserPassword": "New Password",
     "makeNewPassword": "Create a new password to log in",
