@@ -22,9 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "Already Have an Account",
+    ),
+    "appRulesCheckBox": MessageLookupByLibrary.simpleMessage(
+      "By creating an account, you agree to",
+    ),
+    "appRulesNote": MessageLookupByLibrary.simpleMessage(
+      "Our Terms and Conditions",
+    ),
     "body": MessageLookupByLibrary.simpleMessage(
       " Welcome to Flutter Localization Demo",
     ),
+    "doNotHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "Don\'t Have an Account",
+    ),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password"),
+    "makeNewPassword": MessageLookupByLibrary.simpleMessage(
+      "Create a new password to log in",
+    ),
+    "newUserPassword": MessageLookupByLibrary.simpleMessage("New Password"),
     "onBoardingDesc1": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.",
     ),
@@ -33,8 +50,23 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "onBoardingTitle1": MessageLookupByLibrary.simpleMessage("Welcome to"),
     "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("Search and shop"),
+    "or": MessageLookupByLibrary.simpleMessage("Or"),
+    "passwordChanged": MessageLookupByLibrary.simpleMessage(
+      "The password has been changed successfully.",
+    ),
+    "registerNow": MessageLookupByLibrary.simpleMessage("Register Now"),
+    "save": MessageLookupByLibrary.simpleMessage("Save"),
+    "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
+    "signInByApple": MessageLookupByLibrary.simpleMessage("Sign in by Apple"),
+    "signInByFacebook": MessageLookupByLibrary.simpleMessage(
+      "Sign in by Facebook",
+    ),
+    "signInByGoogle": MessageLookupByLibrary.simpleMessage("Sign in by Google"),
+    "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
     "title": MessageLookupByLibrary.simpleMessage("Flutter Localization Demo"),
+    "userEmail": MessageLookupByLibrary.simpleMessage("Email"),
+    "userPassword": MessageLookupByLibrary.simpleMessage("Password"),
   };
 }

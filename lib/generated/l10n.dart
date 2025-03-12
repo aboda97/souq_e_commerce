@@ -80,6 +80,16 @@ class S {
     return Intl.message('Skip', name: 'skip', desc: '', args: []);
   }
 
+  /// `Save`
+  String get save {
+    return Intl.message('Save', name: 'save', desc: '', args: []);
+  }
+
+  /// `Or`
+  String get or {
+    return Intl.message('Or', name: 'or', desc: '', args: []);
+  }
+
   /// `Start Now`
   String get startNow {
     return Intl.message('Start Now', name: 'startNow', desc: '', args: []);
@@ -124,6 +134,148 @@ class S {
       args: [],
     );
   }
+
+  /// `Sign In`
+  String get signIn {
+    return Intl.message('Sign In', name: 'signIn', desc: '', args: []);
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message('Sign Up', name: 'signUp', desc: '', args: []);
+  }
+
+  /// `Email`
+  String get userEmail {
+    return Intl.message('Email', name: 'userEmail', desc: '', args: []);
+  }
+
+  /// `Password`
+  String get userPassword {
+    return Intl.message('Password', name: 'userPassword', desc: '', args: []);
+  }
+
+  /// `New Password`
+  String get newUserPassword {
+    return Intl.message(
+      'New Password',
+      name: 'newUserPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create a new password to log in`
+  String get makeNewPassword {
+    return Intl.message(
+      'Create a new password to log in',
+      name: 'makeNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password has been changed successfully.`
+  String get passwordChanged {
+    return Intl.message(
+      'The password has been changed successfully.',
+      name: 'passwordChanged',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget Password`
+  String get forgetPassword {
+    return Intl.message(
+      'Forget Password',
+      name: 'forgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't Have an Account`
+  String get doNotHaveAccount {
+    return Intl.message(
+      'Don\'t Have an Account',
+      name: 'doNotHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already Have an Account`
+  String get alreadyHaveAccount {
+    return Intl.message(
+      'Already Have an Account',
+      name: 'alreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register Now`
+  String get registerNow {
+    return Intl.message(
+      'Register Now',
+      name: 'registerNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in by Google`
+  String get signInByGoogle {
+    return Intl.message(
+      'Sign in by Google',
+      name: 'signInByGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in by Apple`
+  String get signInByApple {
+    return Intl.message(
+      'Sign in by Apple',
+      name: 'signInByApple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in by Facebook`
+  String get signInByFacebook {
+    return Intl.message(
+      'Sign in by Facebook',
+      name: 'signInByFacebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating an account, you agree to`
+  String get appRulesCheckBox {
+    return Intl.message(
+      'By creating an account, you agree to',
+      name: 'appRulesCheckBox',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our Terms and Conditions`
+  String get appRulesNote {
+    return Intl.message(
+      'Our Terms and Conditions',
+      name: 'appRulesNote',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'don\'tWorryForForgettingPassword' key
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

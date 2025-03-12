@@ -22,7 +22,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "لديك حساب بالفعل",
+    ),
+    "appRulesCheckBox": MessageLookupByLibrary.simpleMessage(
+      "من خلال إنشاء حساب, فإنك توافق علي",
+    ),
+    "appRulesNote": MessageLookupByLibrary.simpleMessage(
+      "الشروط والأحكام الخاصة بنا",
+    ),
     "body": MessageLookupByLibrary.simpleMessage("مرحبا بك في النسخة العربية"),
+    "doNotHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب"),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+    "makeNewPassword": MessageLookupByLibrary.simpleMessage(
+      "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
+    ),
+    "newUserPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
     "onBoardingDesc1": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     ),
@@ -31,8 +46,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "onBoardingTitle1": MessageLookupByLibrary.simpleMessage("مرحبًا بك في"),
     "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+    "or": MessageLookupByLibrary.simpleMessage("أو"),
+    "passwordChanged": MessageLookupByLibrary.simpleMessage(
+      "تم تغيير الباسورد بنجاح",
+    ),
+    "registerNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب الآن"),
+    "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+    "signIn": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+    "signInByApple": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول بواسطة آبل",
+    ),
+    "signInByFacebook": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول بواسطة فيسبوك",
+    ),
+    "signInByGoogle": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول بواسطة جوجل",
+    ),
+    "signUp": MessageLookupByLibrary.simpleMessage("حساب جديد"),
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
     "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
     "title": MessageLookupByLibrary.simpleMessage("نسخة ترجمة فلاتر"),
+    "userEmail": MessageLookupByLibrary.simpleMessage("الربيد الإلكتروني"),
+    "userPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
   };
 }
