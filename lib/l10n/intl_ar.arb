@@ -12,7 +12,7 @@
     "signIn": "تسجيل دخول",
     "signUp": "حساب جديد",
     "userEmail": "البريد الإلكتروني",
-    "fieldRequired":"هذا الحقل مطلوب",
+    "fieldRequired": "هذا الحقل مطلوب",
     "userPassword": "كلمة المرور",
     "newUserPassword": "كلمة مرور جديدة",
     "makeNewPassword": "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",

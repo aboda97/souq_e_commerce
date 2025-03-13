@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:souq_app/core/components/build_outer_border.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
@@ -47,7 +48,10 @@ class CustomTextFormField extends StatelessWidget {
             suffixIcon != null
                 ? GestureDetector(onTap: onSuffixTap, child: Icon(suffixIcon))
                 : null,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
+        border: buildOuterBorder(),
+        enabledBorder: buildOuterBorder(),
+        focusedBorder: buildOuterBorder(),
+        errorBorder: buildErrorOuterBorder(),
 
         contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
       ),

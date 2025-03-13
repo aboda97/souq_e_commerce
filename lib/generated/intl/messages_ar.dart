@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "body": MessageLookupByLibrary.simpleMessage("مرحبا بك في النسخة العربية"),
     "doNotHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب"),
+    "fieldRequired": MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
     "makeNewPassword": MessageLookupByLibrary.simpleMessage(
       "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
@@ -66,7 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
     "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
     "title": MessageLookupByLibrary.simpleMessage("نسخة ترجمة فلاتر"),
-    "userEmail": MessageLookupByLibrary.simpleMessage("الربيد الإلكتروني"),
+    "userEmail": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "userPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
   };
 }

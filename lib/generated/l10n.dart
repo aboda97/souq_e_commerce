@@ -150,6 +150,16 @@ class S {
     return Intl.message('Email', name: 'userEmail', desc: '', args: []);
   }
 
+  /// `This Field is Required`
+  String get fieldRequired {
+    return Intl.message(
+      'This Field is Required',
+      name: 'fieldRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Password`
   String get userPassword {
     return Intl.message('Password', name: 'userPassword', desc: '', args: []);

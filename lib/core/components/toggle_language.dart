@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:souq_app/core/localization/language_cubit.dart';
+import 'package:souq_app/core/services/service_locator.dart';
 
 class ToggleLanguage extends StatelessWidget {
   const ToggleLanguage({super.key});
@@ -9,7 +9,8 @@ class ToggleLanguage extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        BlocProvider.of<LanguageCubit>(context).toggleLanguage();
+        //  BlocProvider.of<LanguageCubit>(context).toggleLanguage();
+        serviceLocator<LanguageCubit>().toggleLanguage();
       },
       icon: Icon(Icons.language),
     );

@@ -60,9 +60,10 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           maintainSize: true,
           maintainAnimation: true,
           maintainState: true,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: CustomButton(
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width * .95,
+            child: CustomBtnApp(
+              text: S.of(context).startNow,
               onPressed: () {
                 SharedPreferencesService.setBool(kIsOnBoardingViewSeen, true);
                 executionPushReplacmentNamedNavigator(
@@ -71,7 +72,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                   2,
                 );
               },
-              text: S.of(context).startNow,
+              textColor: AppColors.whiteColor,
+              borderRadius: kRadiusBtn,
+              elevation: 0,
             ),
           ),
         ),
