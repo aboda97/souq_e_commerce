@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -8,10 +9,12 @@ import 'package:souq_app/core/localization/language_state.dart';
 import 'package:souq_app/core/services/service_locator.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/features/splash_feature/presentation/views/splash_view.dart';
+import 'package:souq_app/firebase_options.dart';
 import 'package:souq_app/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await SharedPreferencesService.init();
   await setupLocator(); // Ensure dependencies are set up before running the app
   runApp(SouqApp());
