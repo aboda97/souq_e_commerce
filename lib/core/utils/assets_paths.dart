@@ -9,4 +9,7 @@ class AssetsPaths {
       'assets/images/bg_on_boarding_img_one.svg';
   static String bgOnBoardingImgTwoPath =
       'assets/images/bg_on_boarding_img_two.svg';
+  static String appleIconPath = 'assets/images/apple.svg';
+  static String googleIconPath = 'assets/images/google.svg';
+  static String facebookIconPath = 'assets/images/fb.svg';
 }

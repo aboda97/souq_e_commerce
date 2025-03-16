@@ -43,7 +43,7 @@ class OnBoardingPageView extends StatelessWidget {
         PageviewItem(
           isVisible: false,
           image: AssetsPaths.onBoardingImgTwoPath,
-          backgroundImage: AssetsPaths.bgOnBoardingImgTwoPath,
+          backgroundImage: AssetsPaths.appleIconPath,
           description: S.of(context).onBoardingDesc2,
           title: Text(
             S.of(context).onBoardingTitle2,

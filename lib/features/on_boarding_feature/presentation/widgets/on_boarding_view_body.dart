@@ -73,7 +73,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 );
               },
               textColor: AppColors.whiteColor,
-              borderRadius: kRadiusBtn,
+              borderRadius: kBorderRadius,
               elevation: 0,
             ),
           ),
