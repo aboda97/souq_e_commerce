@@ -17,7 +17,7 @@
     "newUserPassword": "كلمة مرور جديدة",
     "makeNewPassword": "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
     "passwordChanged": "تم تغيير الباسورد بنجاح",
-    "forgetPassword": "نسيت كلمة المرور",
+    "forgetPassword": "نسيت كلمة المرور ؟",
     "doNotHaveAccount": "لا تمتلك حساب",
     "alreadyHaveAccount": "لديك حساب بالفعل",
     "registerNow": "قم بإنشاء حساب الآن",

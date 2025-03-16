@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "fieldRequired": MessageLookupByLibrary.simpleMessage(
       "This Field is Required",
     ),
-    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password"),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password ?"),
     "makeNewPassword": MessageLookupByLibrary.simpleMessage(
       "Create a new password to log in",
     ),

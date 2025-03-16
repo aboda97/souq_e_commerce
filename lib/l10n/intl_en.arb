@@ -17,7 +17,7 @@
     "newUserPassword": "New Password",
     "makeNewPassword": "Create a new password to log in",
     "passwordChanged": "The password has been changed successfully.",
-    "forgetPassword": "Forget Password",
+    "forgetPassword": "Forget Password ?",
     "doNotHaveAccount": "Don't Have an Account",
     "alreadyHaveAccount": "Already Have an Account",
     "registerNow": "Register Now",

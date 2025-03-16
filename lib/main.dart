@@ -16,7 +16,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await SharedPreferencesService.init();
-  await setupLocator(); // Ensure dependencies are set up before running the app
+  await setupLocator();
   runApp(SouqApp());
 }
 
