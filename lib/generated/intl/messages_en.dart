@@ -20,6 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(errorMessage) =>
+      "An unknown error occurred: ${errorMessage}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -35,14 +38,26 @@ class MessageLookup extends MessageLookupByLibrary {
       " Welcome to Flutter Localization Demo",
     ),
     "doNotHaveAccount": MessageLookupByLibrary.simpleMessage(
-      "Don\'t Have an Account",
+      "Don\'t Have an Account ? ",
+    ),
+    "emailInUse": MessageLookupByLibrary.simpleMessage(
+      "This email is already registered.",
     ),
     "fieldRequired": MessageLookupByLibrary.simpleMessage(
       "This Field is Required",
     ),
-    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password ?"),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage(
+      "Forget Password ? ",
+    ),
+    "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "invalidEmail": MessageLookupByLibrary.simpleMessage(
+      "The email address is not valid.",
+    ),
     "makeNewPassword": MessageLookupByLibrary.simpleMessage(
       "Create a new password to log in",
+    ),
+    "networkError": MessageLookupByLibrary.simpleMessage(
+      "No internet connection. Please check your network.",
     ),
     "newUserPassword": MessageLookupByLibrary.simpleMessage("New Password"),
     "onBoardingDesc1": MessageLookupByLibrary.simpleMessage(
@@ -69,7 +84,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
     "title": MessageLookupByLibrary.simpleMessage("Flutter Localization Demo"),
+    "tooManyRequests": MessageLookupByLibrary.simpleMessage(
+      "Too many attempts. Try again later.",
+    ),
+    "unknownError": m0,
     "userEmail": MessageLookupByLibrary.simpleMessage("Email"),
+    "userNotFound": MessageLookupByLibrary.simpleMessage(
+      "No user found with this email.",
+    ),
     "userPassword": MessageLookupByLibrary.simpleMessage("Password"),
+    "weakPassword": MessageLookupByLibrary.simpleMessage(
+      "The password is too weak.",
+    ),
+    "wrongPassword": MessageLookupByLibrary.simpleMessage(
+      "Incorrect password. Please try again.",
+    ),
   };
 }

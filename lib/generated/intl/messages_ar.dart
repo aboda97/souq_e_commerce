@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(errorMessage) => "حدث خطأ غير معروف: ${errorMessage}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -32,13 +34,25 @@ class MessageLookup extends MessageLookupByLibrary {
       "الشروط والأحكام الخاصة بنا",
     ),
     "body": MessageLookupByLibrary.simpleMessage("مرحبا بك في النسخة العربية"),
-    "doNotHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب"),
+    "doNotHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "لا تمتلك حساب ؟ ",
+    ),
+    "emailInUse": MessageLookupByLibrary.simpleMessage(
+      "هذا البريد الإلكتروني مسجل بالفعل.",
+    ),
     "fieldRequired": MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
-      "نسيت كلمة المرور ؟",
+      "نسيت كلمة المرور ؟ ",
+    ),
+    "fullName": MessageLookupByLibrary.simpleMessage("الإسم كامل"),
+    "invalidEmail": MessageLookupByLibrary.simpleMessage(
+      "البريد الإلكتروني غير صالح.",
     ),
     "makeNewPassword": MessageLookupByLibrary.simpleMessage(
       "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
+    ),
+    "networkError": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد اتصال بالإنترنت. يرجى التحقق من الشبكة.",
     ),
     "newUserPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
     "onBoardingDesc1": MessageLookupByLibrary.simpleMessage(
@@ -69,7 +83,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
     "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
     "title": MessageLookupByLibrary.simpleMessage("نسخة ترجمة فلاتر"),
+    "tooManyRequests": MessageLookupByLibrary.simpleMessage(
+      "محاولات كثيرة جدًا. حاول مرة أخرى لاحقًا.",
+    ),
+    "unknownError": m0,
     "userEmail": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "userNotFound": MessageLookupByLibrary.simpleMessage(
+      "لم يتم العثور على مستخدم بهذا البريد الإلكتروني.",
+    ),
     "userPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "weakPassword": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور ضعيفة جدًا.",
+    ),
+    "wrongPassword": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور غير صحيحة. حاول مرة أخرى.",
+    ),
   };
 }

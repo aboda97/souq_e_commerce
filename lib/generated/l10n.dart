@@ -150,6 +150,11 @@ class S {
     return Intl.message('Email', name: 'userEmail', desc: '', args: []);
   }
 
+  /// `Full Name`
+  String get fullName {
+    return Intl.message('Full Name', name: 'fullName', desc: '', args: []);
+  }
+
   /// `This Field is Required`
   String get fieldRequired {
     return Intl.message(
@@ -195,20 +200,20 @@ class S {
     );
   }
 
-  /// `Forget Password ?`
+  /// `Forget Password ? `
   String get forgetPassword {
     return Intl.message(
-      'Forget Password ?',
+      'Forget Password ? ',
       name: 'forgetPassword',
       desc: '',
       args: [],
     );
   }
 
-  /// `Don't Have an Account`
+  /// `Don't Have an Account ? `
   String get doNotHaveAccount {
     return Intl.message(
-      'Don\'t Have an Account',
+      'Don\'t Have an Account ? ',
       name: 'doNotHaveAccount',
       desc: '',
       args: [],
@@ -286,6 +291,86 @@ class S {
   }
 
   // skipped getter for the 'don\'tWorryForForgettingPassword' key
+
+  /// `The email address is not valid.`
+  String get invalidEmail {
+    return Intl.message(
+      'The email address is not valid.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No user found with this email.`
+  String get userNotFound {
+    return Intl.message(
+      'No user found with this email.',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Incorrect password. Please try again.`
+  String get wrongPassword {
+    return Intl.message(
+      'Incorrect password. Please try again.',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This email is already registered.`
+  String get emailInUse {
+    return Intl.message(
+      'This email is already registered.',
+      name: 'emailInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password is too weak.`
+  String get weakPassword {
+    return Intl.message(
+      'The password is too weak.',
+      name: 'weakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No internet connection. Please check your network.`
+  String get networkError {
+    return Intl.message(
+      'No internet connection. Please check your network.',
+      name: 'networkError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many attempts. Try again later.`
+  String get tooManyRequests {
+    return Intl.message(
+      'Too many attempts. Try again later.',
+      name: 'tooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unknown error occurred: {errorMessage}`
+  String unknownError(Object errorMessage) {
+    return Intl.message(
+      'An unknown error occurred: $errorMessage',
+      name: 'unknownError',
+      desc: '',
+      args: [errorMessage],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

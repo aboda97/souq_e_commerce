@@ -12,13 +12,13 @@
     "signIn": "Sign In",
     "signUp": "Sign Up",
     "userEmail": "Email",
-    "userName":"Full Name"
+    "fullName": "Full Name",
     "fieldRequired": "This Field is Required",
     "userPassword": "Password",
     "newUserPassword": "New Password",
     "makeNewPassword": "Create a new password to log in",
     "passwordChanged": "The password has been changed successfully.",
-    "forgetPassword": "Forget Password ?",
+    "forgetPassword": "Forget Password ? ",
     "doNotHaveAccount": "Don't Have an Account ? ",
     "alreadyHaveAccount": "Already Have an Account",
     "registerNow": "Register Now",
@@ -27,5 +27,13 @@
     "signInByFacebook": "Sign in by Facebook",
     "appRulesCheckBox": "By creating an account, you agree to",
     "appRulesNote": "Our Terms and Conditions",
-    "don'tWorryForForgettingPassword": "Don't worry, just enter your phone number and we'll send you a verification code."
+    "don'tWorryForForgettingPassword": "Don't worry, just enter your phone number and we'll send you a verification code.",
+    "invalidEmail": "The email address is not valid.",
+    "userNotFound": "No user found with this email.",
+    "wrongPassword": "Incorrect password. Please try again.",
+    "emailInUse": "This email is already registered.",
+    "weakPassword": "The password is too weak.",
+    "networkError": "No internet connection. Please check your network.",
+    "tooManyRequests": "Too many attempts. Try again later.",
+    "unknownError": "An unknown error occurred: {errorMessage}"
 }

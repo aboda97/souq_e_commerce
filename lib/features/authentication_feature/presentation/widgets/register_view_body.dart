@@ -17,11 +17,11 @@ class RegisterViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
       children: [
         CustomTextFormField(
-          hintText: S.of(context).userEmail,
+          hintText: S.of(context).fullName,
           keyboardType: TextInputType.emailAddress,
           validator: (value) {
             if (value == null || value.isEmpty) {
-              return 'هذا الحقل مطلوب';
+              return S.of(context).fieldRequired;
             }
             return null;
           },
@@ -33,7 +33,7 @@ class RegisterViewBody extends StatelessWidget {
           keyboardType: TextInputType.emailAddress,
           validator: (value) {
             if (value == null || value.isEmpty) {
-              return 'هذا الحقل مطلوب';
+              return S.of(context).fieldRequired;
             }
             return null;
           },
@@ -46,7 +46,7 @@ class RegisterViewBody extends StatelessWidget {
           keyboardType: TextInputType.text,
           validator: (value) {
             if (value == null || value.isEmpty) {
-              return 'هذا الحقل مطلوب';
+              return S.of(context).fieldRequired;
             }
             return null;
           },
@@ -56,9 +56,7 @@ class RegisterViewBody extends StatelessWidget {
           children: [
             Checkbox(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(
-                  4,
-                ), 
+                borderRadius: BorderRadius.circular(4),
               ),
               value: true,
               onChanged: (bool? value) {},

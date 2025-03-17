@@ -24,7 +24,7 @@ class LoginViewBody extends StatelessWidget {
           keyboardType: TextInputType.emailAddress,
           validator: (value) {
             if (value == null || value.isEmpty) {
-              return 'هذا الحقل مطلوب';
+              return S.of(context).fieldRequired;
             }
             return null;
           },
@@ -32,12 +32,12 @@ class LoginViewBody extends StatelessWidget {
         const SizedBox(height: 16),
         CustomTextFormField(
           suffixIcon: Icons.remove_red_eye_rounded,
-          onSuffixTap: (){},
+          onSuffixTap: () {},
           hintText: S.of(context).userPassword,
           keyboardType: TextInputType.text,
           validator: (value) {
             if (value == null || value.isEmpty) {
-              return 'هذا الحقل مطلوب';
+              return S.of(context).fieldRequired;
             }
             return null;
           },
