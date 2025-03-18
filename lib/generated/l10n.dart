@@ -471,6 +471,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Good job, you are Registered`
+  String get snackBarSuccessAlert {
+    return Intl.message(
+      'Good job, you are Registered',
+      name: 'snackBarSuccessAlert',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

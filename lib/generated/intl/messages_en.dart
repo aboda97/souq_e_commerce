@@ -107,6 +107,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "signInByGoogle": MessageLookupByLibrary.simpleMessage("Sign in by Google"),
     "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "snackBarSuccessAlert": MessageLookupByLibrary.simpleMessage(
+      "Good job, you are Registered",
+    ),
     "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
     "title": MessageLookupByLibrary.simpleMessage("Flutter Localization Demo"),
     "tooManyRequests": MessageLookupByLibrary.simpleMessage(

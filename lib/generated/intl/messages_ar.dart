@@ -104,6 +104,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "signUp": MessageLookupByLibrary.simpleMessage("حساب جديد"),
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
+    "snackBarSuccessAlert": MessageLookupByLibrary.simpleMessage(
+      "عمل جيد, لقد قمت بالتسجيل معنا",
+    ),
     "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
     "title": MessageLookupByLibrary.simpleMessage("نسخة ترجمة فلاتر"),
     "tooManyRequests": MessageLookupByLibrary.simpleMessage(

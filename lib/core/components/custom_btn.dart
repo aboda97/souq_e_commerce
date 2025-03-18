@@ -37,6 +37,7 @@ class CustomBtnApp extends StatelessWidget {
   final double borderRadius;
   final double? elevation;
   final IconData? icon;
+  final bool isLoading;
   const CustomBtnApp({
     super.key,
     required this.text,
@@ -46,6 +47,7 @@ class CustomBtnApp extends StatelessWidget {
     required this.borderRadius,
     required this.elevation,
     this.icon,
+    this.isLoading = false,
   });
 
   @override
@@ -60,8 +62,11 @@ class CustomBtnApp extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadius),
         ),
       ),
-      onPressed: onPressed,
-      child: Text(text, style: TextStyles.semiBold16),
+      onPressed: isLoading ? null : onPressed,
+      child:
+          isLoading
+              ? CircularProgressIndicator(color: AppColors.whiteColor)
+              : Text(text, style: TextStyles.semiBold16),
     );
   }
 }

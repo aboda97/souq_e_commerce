@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:souq_app/constants.dart';
 import 'package:souq_app/core/components/custom_btn.dart';
 import 'package:souq_app/core/components/custom_text_form_field.dart';
 import 'package:souq_app/core/components/custom_text_span.dart';
 import 'package:souq_app/core/components/excution_navigator.dart';
 import 'package:souq_app/core/utils/app_colors.dart';
+import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_cubit.dart';
+import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_state.dart';
 import 'package:souq_app/features/authentication_feature/presentation/views/login_view.dart';
+import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 import 'package:souq_app/generated/l10n.dart';
 
 class RegisterViewBody extends StatelessWidget {
-  const RegisterViewBody({super.key});
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController nameController = TextEditingController();
+  RegisterViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -72,12 +80,44 @@ class RegisterViewBody extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 32),
-          child: CustomBtnApp(
-            text: S.of(context).registerNow,
-            onPressed: () {},
-            textColor: AppColors.whiteColor,
-            borderRadius: kBorderRadius,
-            elevation: 0,
+          child: BlocConsumer<RegisterCubit, RegisterStates>(
+            listener: (context, state) {
+              if (state is RegisterSuccess) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(S.of(context).snackBarSuccessAlert),
+                    backgroundColor: Colors.green,
+                  ),
+                );
+                Navigator.pushReplacementNamed(context, TestView.routeName);
+              } else if (state is RegisterFailure) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(state.failure.errMsg),
+                    backgroundColor: Colors.red,
+                  ),
+                );
+              }
+            },
+            builder: (context, state) {
+              return CustomBtnApp(
+                text: S.of(context).registerNow,
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    BlocProvider.of<RegisterCubit>(
+                      context,
+                    ).registerByEmailAndPassword(
+                      emailController.text,
+                      passwordController.text,
+                      nameController.text,
+                    );
+                  }
+                },
+                textColor: AppColors.whiteColor,
+                borderRadius: kBorderRadius,
+                elevation: 0,
+              );
+            },
           ),
         ),
         Center(

@@ -45,5 +45,6 @@
     "unexpectedError": "Unexpected error occurred, please try again later",
     "notFound": "Request not found",
     "internalServerError": "Internal server error",
-    "generalError": "Oops! Something went wrong, please try again later"
+    "generalError": "Oops! Something went wrong, please try again later",
+    "snackBarSuccessAlert": "Good job, you are Registered"
 }
