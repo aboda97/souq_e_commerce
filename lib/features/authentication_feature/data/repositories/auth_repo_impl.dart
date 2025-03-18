@@ -8,35 +8,6 @@ import 'package:souq_app/features/authentication_feature/domain/entities/user_en
 import 'package:souq_app/features/authentication_feature/domain/repositories/auth_repo.dart';
 import 'package:souq_app/generated/l10n.dart';
 
-// class AuthRepoImpl extends AuthRepo {
-//   final FireBaseAuthService fireBaseAuthService;
-
-//   AuthRepoImpl({required this.fireBaseAuthService});
-//   @override
-//   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
-//     String userEmail,
-//     String userPassword,
-//     String userName,
-//   ) async {
-//     try {
-//       var userLogin = await fireBaseAuthService.createUserWithEmailAndPassword(
-//         email: userEmail,
-//         password: userPassword,
-//       );
-
-//       return right(UserModel.fromFireBaseUser(userLogin!));
-//     } on CustomException catch (e) {
-//       return left(ServerFailure(e.exceptionMsg));
-//     } catch (e) {
-//       return left(
-//         ServerFailure(S.current.unexpectedError),
-//       );
-//     }
-//   }
-// }
-
-
-
 class AuthRepoImpl extends AuthRepo {
   final FireBaseAuthService fireBaseAuthService;
 
@@ -49,10 +20,11 @@ class AuthRepoImpl extends AuthRepo {
     String userName,
   ) async {
     try {
-      final userLogin = await fireBaseAuthService.createUserWithEmailAndPassword(
-        email: userEmail,
-        password: userPassword,
-      );
+      final userLogin = await fireBaseAuthService
+          .createUserWithEmailAndPassword(
+            email: userEmail,
+            password: userPassword,
+          );
 
       if (userLogin == null) {
         return left(ServerFailure(S.current.unexpectedError));

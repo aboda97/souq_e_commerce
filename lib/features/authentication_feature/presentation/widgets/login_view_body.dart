@@ -4,7 +4,7 @@ import 'package:souq_app/core/components/custom_btn.dart';
 import 'package:souq_app/core/components/custom_login_social.dart';
 import 'package:souq_app/core/components/custom_text_form_field.dart';
 import 'package:souq_app/core/components/custom_text_span.dart';
-import 'package:souq_app/core/components/excution_navigator.dart';
+import 'package:souq_app/core/helper_functions/excution_navigator.dart';
 import 'package:souq_app/core/utils/app_colors.dart';
 import 'package:souq_app/core/utils/app_styles.dart';
 import 'package:souq_app/core/utils/assets_paths.dart';

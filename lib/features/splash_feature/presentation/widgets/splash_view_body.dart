@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:souq_app/constants.dart';
-import 'package:souq_app/core/components/excution_navigator.dart';
+import 'package:souq_app/core/helper_functions/excution_navigator.dart';
 import 'package:souq_app/core/helper_functions/localization_lan_checker.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/assets_paths.dart';

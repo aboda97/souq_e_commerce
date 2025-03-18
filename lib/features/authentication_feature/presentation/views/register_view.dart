@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:souq_app/core/components/custom_app_bar.dart';
-import 'package:souq_app/core/components/excution_navigator.dart';
+import 'package:souq_app/core/helper_functions/excution_navigator.dart';
 import 'package:souq_app/core/components/toggle_language.dart';
 import 'package:souq_app/core/services/service_locator.dart';
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_cubit.dart';

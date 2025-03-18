@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:souq_app/constants.dart';
-import 'package:souq_app/core/components/excution_navigator.dart';
+import 'package:souq_app/core/helper_functions/excution_navigator.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/app_styles.dart';
 import 'package:souq_app/features/authentication_feature/presentation/views/login_view.dart';

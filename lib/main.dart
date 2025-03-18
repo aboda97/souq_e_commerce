@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:souq_app/core/components/app_theme.dart';
+import 'package:souq_app/core/helper_functions/build_app_theme.dart';
 import 'package:souq_app/core/helper_functions/on_generate_route_func.dart';
 import 'package:souq_app/core/localization/language_cubit.dart';
 import 'package:souq_app/core/localization/language_state.dart';

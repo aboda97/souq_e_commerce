@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:souq_app/constants.dart';
 import 'package:souq_app/core/components/custom_btn.dart';
-import 'package:souq_app/core/components/custom_snack_bar.dart';
+import 'package:souq_app/core/helper_functions/build_snack_bar.dart';
 import 'package:souq_app/core/components/custom_text_form_field.dart';
 import 'package:souq_app/core/components/custom_text_span.dart';
-import 'package:souq_app/core/components/excution_navigator.dart';
+import 'package:souq_app/core/helper_functions/excution_navigator.dart';
+import 'package:souq_app/core/services/service_locator.dart';
 import 'package:souq_app/core/utils/app_colors.dart';
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_cubit.dart';
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_state.dart';
@@ -55,8 +56,11 @@ class RegisterViewBody extends StatelessWidget {
           const SizedBox(height: 16),
           CustomTextFormField(
             controller: passwordController,
-            suffixIcon: Icons.remove_red_eye_rounded,
-            onSuffixTap: () {},
+            suffixIcon: 
+            BlocProvider.of<RegisterCubit>(context).isPasswordVisible ?Icons.remove_red_eye_rounded: Icons.visibility_off  ,
+            onSuffixTap: () {
+              BlocProvider.of<RegisterCubit>(context).togglePasswordVisibility();
+            },
             hintText: S.of(context).userPassword,
             keyboardType: TextInputType.text,
             validator: (value) {
@@ -65,6 +69,7 @@ class RegisterViewBody extends StatelessWidget {
               }
               return null;
             },
+            
           ),
           const SizedBox(height: 16),
           buildAgreementCheckbox(context),
@@ -85,9 +90,7 @@ class RegisterViewBody extends StatelessWidget {
                   isLoading: state is RegisterLoading,
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      BlocProvider.of<RegisterCubit>(
-                        context,
-                      ).registerByEmailAndPassword(
+                      serviceLocator<RegisterCubit>().registerByEmailAndPassword(
                         emailController.text,
                         passwordController.text,
                         nameController.text,
