@@ -35,5 +35,15 @@
     "weakPassword": "The password is too weak.",
     "networkError": "No internet connection. Please check your network.",
     "tooManyRequests": "Too many attempts. Try again later.",
-    "unknownError": "An unknown error occurred: {errorMessage}"
+    "unknownError": "An unknown error occurred: {errorMessage}",
+    "connectionTimeout": "Connection timeout with the server",
+    "sendTimeout": "Request sending timeout",
+    "receiveTimeout": "Response receiving timeout",
+    "badCertificate": "Invalid certificate from the server",
+    "requestCancelled": "Request was cancelled",
+    "connectionError": "No internet connection",
+    "unexpectedError": "Unexpected error occurred, please try again later",
+    "notFound": "Request not found",
+    "internalServerError": "Internal server error",
+    "generalError": "Oops! Something went wrong, please try again later"
 }

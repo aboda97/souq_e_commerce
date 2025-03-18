@@ -33,7 +33,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "appRulesNote": MessageLookupByLibrary.simpleMessage(
       "الشروط والأحكام الخاصة بنا",
     ),
+    "badCertificate": MessageLookupByLibrary.simpleMessage(
+      "شهادة غير صالحة من الخادم",
+    ),
     "body": MessageLookupByLibrary.simpleMessage("مرحبا بك في النسخة العربية"),
+    "connectionError": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد اتصال بالإنترنت",
+    ),
+    "connectionTimeout": MessageLookupByLibrary.simpleMessage(
+      "انتهت مهلة الاتصال بالخادم",
+    ),
     "doNotHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لا تمتلك حساب ؟ ",
     ),
@@ -45,6 +54,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "نسيت كلمة المرور ؟ ",
     ),
     "fullName": MessageLookupByLibrary.simpleMessage("الإسم كامل"),
+    "generalError": MessageLookupByLibrary.simpleMessage(
+      "عذرًا! حدث خطأ، يرجى المحاولة لاحقًا",
+    ),
+    "internalServerError": MessageLookupByLibrary.simpleMessage(
+      "خطأ داخلي في الخادم",
+    ),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني غير صالح.",
     ),
@@ -55,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "لا يوجد اتصال بالإنترنت. يرجى التحقق من الشبكة.",
     ),
     "newUserPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
+    "notFound": MessageLookupByLibrary.simpleMessage("الطلب غير موجود"),
     "onBoardingDesc1": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     ),
@@ -67,8 +83,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordChanged": MessageLookupByLibrary.simpleMessage(
       "تم تغيير الباسورد بنجاح",
     ),
+    "receiveTimeout": MessageLookupByLibrary.simpleMessage(
+      "انتهت مهلة استقبال الاستجابة",
+    ),
     "registerNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب الآن"),
+    "requestCancelled": MessageLookupByLibrary.simpleMessage("تم إلغاء الطلب"),
     "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+    "sendTimeout": MessageLookupByLibrary.simpleMessage(
+      "انتهت مهلة إرسال الطلب",
+    ),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "signInByApple": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بواسطة آبل",
@@ -85,6 +108,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "title": MessageLookupByLibrary.simpleMessage("نسخة ترجمة فلاتر"),
     "tooManyRequests": MessageLookupByLibrary.simpleMessage(
       "محاولات كثيرة جدًا. حاول مرة أخرى لاحقًا.",
+    ),
+    "unexpectedError": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ غير متوقع، يرجى المحاولة لاحقًا",
     ),
     "unknownError": m0,
     "userEmail": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),

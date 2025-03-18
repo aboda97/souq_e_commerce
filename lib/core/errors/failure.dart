@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:souq_app/generated/l10n.dart';
 
 abstract class Failure {
   final String errMsg;
@@ -12,27 +13,27 @@ class ServerFailure extends Failure {
   factory ServerFailure.fromDioException(DioException dioException) {
     switch (dioException.type) {
       case DioExceptionType.connectionTimeout:
-        return ServerFailure('Connection timeOut with ApiServer');
+        return ServerFailure(S.current.connectionTimeout);
       case DioExceptionType.sendTimeout:
-        return ServerFailure('Send timeOut with ApiServer');
+        return ServerFailure(S.current.sendTimeout);
       case DioExceptionType.receiveTimeout:
-        return ServerFailure('Receive timeOut with ApiServer');
+        return ServerFailure(S.current.receiveTimeout);
       case DioExceptionType.badCertificate:
-        return ServerFailure('BadCertificate timeOut with ApiServer');
+        return ServerFailure(S.current.badCertificate);
       case DioExceptionType.badResponse:
         return ServerFailure.fromResponse(
           dioException.response!.statusCode!,
           dioException.response!.data,
         );
       case DioExceptionType.cancel:
-        return ServerFailure('Request from Api is Cancelled');
+        return ServerFailure(S.current.requestCancelled);
       case DioExceptionType.connectionError:
-        return ServerFailure('ConnectionError timeOut with ApiServer');
+        return ServerFailure(S.current.connectionError);
       case DioExceptionType.unknown:
         if (dioException.message!.contains('SocketException')) {
-          return ServerFailure('No Internet Connection');
+          return ServerFailure(S.current.connectionError);
         }
-        return ServerFailure('UnExpected Error, Please Try Later!');
+        return ServerFailure(S.current.unexpectedError);
     }
   }
 
@@ -40,11 +41,11 @@ class ServerFailure extends Failure {
     if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
       return ServerFailure(response['error']['message']);
     } else if (statusCode == 404) {
-      return ServerFailure('Request is Not Found');
+      return ServerFailure(S.current.notFound);
     } else if (statusCode == 500) {
-      return ServerFailure('Internal Server Error');
+      return ServerFailure(S.current.internalServerError);
     } else {
-      return ServerFailure('Ops,, There is an Error, Please Try Later!');
+      return ServerFailure(S.current.generalError);
     }
   }
 }

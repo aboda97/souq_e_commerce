@@ -371,6 +371,106 @@ class S {
       args: [errorMessage],
     );
   }
+
+  /// `Connection timeout with the server`
+  String get connectionTimeout {
+    return Intl.message(
+      'Connection timeout with the server',
+      name: 'connectionTimeout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request sending timeout`
+  String get sendTimeout {
+    return Intl.message(
+      'Request sending timeout',
+      name: 'sendTimeout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Response receiving timeout`
+  String get receiveTimeout {
+    return Intl.message(
+      'Response receiving timeout',
+      name: 'receiveTimeout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid certificate from the server`
+  String get badCertificate {
+    return Intl.message(
+      'Invalid certificate from the server',
+      name: 'badCertificate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request was cancelled`
+  String get requestCancelled {
+    return Intl.message(
+      'Request was cancelled',
+      name: 'requestCancelled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No internet connection`
+  String get connectionError {
+    return Intl.message(
+      'No internet connection',
+      name: 'connectionError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unexpected error occurred, please try again later`
+  String get unexpectedError {
+    return Intl.message(
+      'Unexpected error occurred, please try again later',
+      name: 'unexpectedError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request not found`
+  String get notFound {
+    return Intl.message(
+      'Request not found',
+      name: 'notFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Internal server error`
+  String get internalServerError {
+    return Intl.message(
+      'Internal server error',
+      name: 'internalServerError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Oops! Something went wrong, please try again later`
+  String get generalError {
+    return Intl.message(
+      'Oops! Something went wrong, please try again later',
+      name: 'generalError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

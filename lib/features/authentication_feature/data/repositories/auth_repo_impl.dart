@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter/material.dart';
 import 'package:souq_app/core/errors/custom_exception.dart';
 import 'package:souq_app/core/errors/failure.dart';
 import 'package:souq_app/core/services/fire_base_auth_service.dart';
@@ -15,21 +14,21 @@ class AuthRepoImpl extends AuthRepo {
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
     String userEmail,
     String userPassword,
-    BuildContext context,
     String userName,
   ) async {
     try {
       var userLogin = await fireBaseAuthService.createUserWithEmailAndPassword(
         email: userEmail,
         password: userPassword,
-        context: context,
       );
 
       return right(UserModel.fromFireBaseUser(userLogin));
     } on CustomException catch (e) {
       return left(ServerFailure(e.exceptionMsg));
     } catch (e) {
-      return left(ServerFailure('Unexpected error occurred, please try again later.'));
+      return left(
+        ServerFailure('Unexpected error occurred, please try again later.'),
+      );
     }
   }
 }

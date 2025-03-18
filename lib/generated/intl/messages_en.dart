@@ -34,8 +34,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "appRulesNote": MessageLookupByLibrary.simpleMessage(
       "Our Terms and Conditions",
     ),
+    "badCertificate": MessageLookupByLibrary.simpleMessage(
+      "Invalid certificate from the server",
+    ),
     "body": MessageLookupByLibrary.simpleMessage(
       " Welcome to Flutter Localization Demo",
+    ),
+    "connectionError": MessageLookupByLibrary.simpleMessage(
+      "No internet connection",
+    ),
+    "connectionTimeout": MessageLookupByLibrary.simpleMessage(
+      "Connection timeout with the server",
     ),
     "doNotHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t Have an Account ? ",
@@ -50,6 +59,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Forget Password ? ",
     ),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "generalError": MessageLookupByLibrary.simpleMessage(
+      "Oops! Something went wrong, please try again later",
+    ),
+    "internalServerError": MessageLookupByLibrary.simpleMessage(
+      "Internal server error",
+    ),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "The email address is not valid.",
     ),
@@ -60,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "No internet connection. Please check your network.",
     ),
     "newUserPassword": MessageLookupByLibrary.simpleMessage("New Password"),
+    "notFound": MessageLookupByLibrary.simpleMessage("Request not found"),
     "onBoardingDesc1": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.",
     ),
@@ -72,8 +88,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordChanged": MessageLookupByLibrary.simpleMessage(
       "The password has been changed successfully.",
     ),
+    "receiveTimeout": MessageLookupByLibrary.simpleMessage(
+      "Response receiving timeout",
+    ),
     "registerNow": MessageLookupByLibrary.simpleMessage("Register Now"),
+    "requestCancelled": MessageLookupByLibrary.simpleMessage(
+      "Request was cancelled",
+    ),
     "save": MessageLookupByLibrary.simpleMessage("Save"),
+    "sendTimeout": MessageLookupByLibrary.simpleMessage(
+      "Request sending timeout",
+    ),
     "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signInByApple": MessageLookupByLibrary.simpleMessage("Sign in by Apple"),
     "signInByFacebook": MessageLookupByLibrary.simpleMessage(
@@ -86,6 +111,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "title": MessageLookupByLibrary.simpleMessage("Flutter Localization Demo"),
     "tooManyRequests": MessageLookupByLibrary.simpleMessage(
       "Too many attempts. Try again later.",
+    ),
+    "unexpectedError": MessageLookupByLibrary.simpleMessage(
+      "Unexpected error occurred, please try again later",
     ),
     "unknownError": m0,
     "userEmail": MessageLookupByLibrary.simpleMessage("Email"),

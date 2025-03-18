@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:souq_app/generated/l10n.dart';
 
 class AuthFireBasExceptions implements Exception {
@@ -7,29 +6,24 @@ class AuthFireBasExceptions implements Exception {
 
   AuthFireBasExceptions(this.message);
 
-  factory AuthFireBasExceptions.fromFirebaseAuth(
-    FirebaseAuthException e,
-    BuildContext context,
-  ) {
+  factory AuthFireBasExceptions.fromFirebaseAuth(FirebaseAuthException e) {
     switch (e.code) {
       case 'invalid-email':
-        return AuthFireBasExceptions(S.of(context).invalidEmail);
+        return AuthFireBasExceptions(S.current.invalidEmail);
       case 'user-not-found':
-        return AuthFireBasExceptions(S.of(context).userNotFound);
+        return AuthFireBasExceptions(S.current.userNotFound);
       case 'wrong-password':
-        return AuthFireBasExceptions(S.of(context).wrongPassword);
+        return AuthFireBasExceptions(S.current.wrongPassword);
       case 'email-already-in-use':
-        return AuthFireBasExceptions(S.of(context).emailInUse);
+        return AuthFireBasExceptions(S.current.emailInUse);
       case 'weak-password':
-        return AuthFireBasExceptions(S.of(context).weakPassword);
+        return AuthFireBasExceptions(S.current.weakPassword);
       case 'network-request-failed':
-        return AuthFireBasExceptions(S.of(context).networkError);
+        return AuthFireBasExceptions(S.current.networkError);
       case 'too-many-requests':
-        return AuthFireBasExceptions(S.of(context).tooManyRequests);
+        return AuthFireBasExceptions(S.current.tooManyRequests);
       default:
-        return AuthFireBasExceptions(
-          S.of(context).unknownError(e.message ?? ''),
-        );
+        return AuthFireBasExceptions(S.current.unknownError(e.message ?? ''));
     }
   }
 

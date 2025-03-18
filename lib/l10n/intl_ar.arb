@@ -35,5 +35,15 @@
     "weakPassword": "كلمة المرور ضعيفة جدًا.",
     "networkError": "لا يوجد اتصال بالإنترنت. يرجى التحقق من الشبكة.",
     "tooManyRequests": "محاولات كثيرة جدًا. حاول مرة أخرى لاحقًا.",
-    "unknownError": "حدث خطأ غير معروف: {errorMessage}"
+    "unknownError": "حدث خطأ غير معروف: {errorMessage}",
+    "connectionTimeout": "انتهت مهلة الاتصال بالخادم",
+    "sendTimeout": "انتهت مهلة إرسال الطلب",
+    "receiveTimeout": "انتهت مهلة استقبال الاستجابة",
+    "badCertificate": "شهادة غير صالحة من الخادم",
+    "requestCancelled": "تم إلغاء الطلب",
+    "connectionError": "لا يوجد اتصال بالإنترنت",
+    "unexpectedError": "حدث خطأ غير متوقع، يرجى المحاولة لاحقًا",
+    "notFound": "الطلب غير موجود",
+    "internalServerError": "خطأ داخلي في الخادم",
+    "generalError": "عذرًا! حدث خطأ، يرجى المحاولة لاحقًا"
 }
