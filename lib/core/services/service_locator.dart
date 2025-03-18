@@ -4,6 +4,7 @@ import 'package:souq_app/core/localization/language_cubit.dart';
 import 'package:souq_app/core/services/fire_base_auth_service.dart';
 import 'package:souq_app/features/authentication_feature/data/repositories/auth_repo_impl.dart';
 import 'package:souq_app/features/authentication_feature/domain/repositories/auth_repo.dart';
+import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_cubit.dart';
 
 final GetIt serviceLocator = GetIt.instance;
 
@@ -14,8 +15,16 @@ Future<void> setupLocator() async {
     () => sharedPreferences,
   );
 
+  //-----------------> SERVICES  <-----------------//
+  serviceLocator.registerLazySingleton<FireBaseAuthService>(
+    () => FireBaseAuthService(),
+  );
+
   //-----------------> CUBITS  <-----------------//
   serviceLocator.registerLazySingleton<LanguageCubit>(() => LanguageCubit());
+  serviceLocator.registerLazySingleton<RegisterCubit>(
+    () => RegisterCubit(serviceLocator<AuthRepo>()),
+  );
 
   //-----------------> REPOSITORIES  <-----------------//
   serviceLocator.registerLazySingleton<AuthRepo>(
