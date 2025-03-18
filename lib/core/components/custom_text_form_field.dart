@@ -10,7 +10,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextInputType keyboardType;
   final bool obscureText;
   final String? Function(String?)? validator;
-  final Function()? onSuffixTap;
+  final void Function()? onPressed;
   //final bool readOnly;
   final void Function(String?)? onSaved;
 
@@ -24,7 +24,7 @@ class CustomTextFormField extends StatelessWidget {
     this.keyboardType = TextInputType.text,
     this.obscureText = false,
     this.validator,
-    this.onSuffixTap,
+    this.onPressed,
     //  this.readOnly = false,
     this.onSaved,
   });
@@ -32,7 +32,6 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      
       controller: controller,
       keyboardType: keyboardType,
       obscureText: obscureText,
@@ -45,10 +44,16 @@ class CustomTextFormField extends StatelessWidget {
         hintText: hintText,
         labelText: labelText,
         prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
+        // prefixIcon: Icon(prefixIcon) ,
+        // suffixIcon:
+        //     suffixIcon != null
+        //         ? GestureDetector(onTap: onSuffixTap, child: Icon(suffixIcon))
+        //         : null,
         suffixIcon:
             suffixIcon != null
-                ? GestureDetector(onTap: onSuffixTap, child: Icon(suffixIcon))
+                ? IconButton(onPressed: onPressed, icon: Icon(suffixIcon))
                 : null,
+
         border: buildOuterBorder(),
         enabledBorder: buildOuterBorder(),
         focusedBorder: buildOuterBorder(),

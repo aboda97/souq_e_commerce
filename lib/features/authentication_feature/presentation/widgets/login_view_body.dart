@@ -32,7 +32,7 @@ class LoginViewBody extends StatelessWidget {
         const SizedBox(height: 16),
         CustomTextFormField(
           suffixIcon: Icons.remove_red_eye_rounded,
-          onSuffixTap: () {},
+          onPressed: () {},
           hintText: S.of(context).userPassword,
           keyboardType: TextInputType.text,
           validator: (value) {

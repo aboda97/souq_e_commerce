@@ -19,6 +19,4 @@ class RegisterFailure extends RegisterStates {
   RegisterFailure({required this.failure});
 }
 class RegisterPasswordVisibilityChanged extends RegisterStates {
-  final bool isPasswordVisible;
-  RegisterPasswordVisibilityChanged(this.isPasswordVisible);
 }

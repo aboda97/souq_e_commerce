@@ -13,7 +13,7 @@ class RegisterCubit extends Cubit<RegisterStates> {
   bool isPasswordVisible = false;
   void togglePasswordVisibility() {
   isPasswordVisible = !isPasswordVisible;
-  emit(RegisterPasswordVisibilityChanged(isPasswordVisible));
+  emit(RegisterPasswordVisibilityChanged());
 }
 
   Future<void> registerByEmailAndPassword(
