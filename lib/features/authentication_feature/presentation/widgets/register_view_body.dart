@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:souq_app/constants.dart';
 import 'package:souq_app/core/components/custom_btn.dart';
+import 'package:souq_app/core/components/custom_snack_bar.dart';
 import 'package:souq_app/core/components/custom_text_form_field.dart';
 import 'package:souq_app/core/components/custom_text_span.dart';
 import 'package:souq_app/core/components/excution_navigator.dart';
@@ -9,6 +10,7 @@ import 'package:souq_app/core/utils/app_colors.dart';
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_cubit.dart';
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_state.dart';
 import 'package:souq_app/features/authentication_feature/presentation/views/login_view.dart';
+import 'package:souq_app/features/authentication_feature/presentation/widgets/build_agreement_check_box.dart';
 import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 import 'package:souq_app/generated/l10n.dart';
 
@@ -38,7 +40,7 @@ class RegisterViewBody extends StatelessWidget {
             },
           ),
           const SizedBox(height: 16),
-      
+
           CustomTextFormField(
             controller: emailController,
             hintText: S.of(context).userEmail,
@@ -65,43 +67,16 @@ class RegisterViewBody extends StatelessWidget {
             },
           ),
           const SizedBox(height: 16),
-          Row(
-            children: [
-              Checkbox(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                value: true,
-                onChanged: (bool? value) {},
-              ),
-              Expanded(
-                child: CustomTxtSpan(
-                  onRegisterTap: () {},
-                  textOne: S.of(context).appRulesCheckBox,
-                  textTwo: S.of(context).appRulesNote,
-                ),
-              ),
-            ],
-          ),
+          buildAgreementCheckbox(context),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 32),
             child: BlocConsumer<RegisterCubit, RegisterStates>(
               listener: (context, state) {
                 if (state is RegisterSuccess) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(S.of(context).snackBarSuccessAlert),
-                      backgroundColor: Colors.green,
-                    ),
-                  );
-                  Navigator.pushReplacementNamed(context, TestView.routeName);
+                 showSnackBar(context, S.of(context).snackBarSuccessAlert, AppColors.primaryColor);
+                  executionPushReplacmentNamedNavigator(context, TestView.routeName, 0);
                 } else if (state is RegisterFailure) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(state.failure.errMsg),
-                      backgroundColor: Colors.red,
-                    ),
-                  );
+                  showSnackBar(context, state.failure.errMsg, Colors.red);
                 }
               },
               builder: (context, state) {

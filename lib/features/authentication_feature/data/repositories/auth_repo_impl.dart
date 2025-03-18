@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:souq_app/core/errors/auth_fire_base_exceptions.dart';
 import 'package:souq_app/core/errors/custom_exception.dart';
 import 'package:souq_app/core/errors/failure.dart';
 import 'package:souq_app/core/services/fire_base_auth_service.dart';
@@ -7,10 +8,40 @@ import 'package:souq_app/features/authentication_feature/domain/entities/user_en
 import 'package:souq_app/features/authentication_feature/domain/repositories/auth_repo.dart';
 import 'package:souq_app/generated/l10n.dart';
 
+// class AuthRepoImpl extends AuthRepo {
+//   final FireBaseAuthService fireBaseAuthService;
+
+//   AuthRepoImpl({required this.fireBaseAuthService});
+//   @override
+//   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
+//     String userEmail,
+//     String userPassword,
+//     String userName,
+//   ) async {
+//     try {
+//       var userLogin = await fireBaseAuthService.createUserWithEmailAndPassword(
+//         email: userEmail,
+//         password: userPassword,
+//       );
+
+//       return right(UserModel.fromFireBaseUser(userLogin!));
+//     } on CustomException catch (e) {
+//       return left(ServerFailure(e.exceptionMsg));
+//     } catch (e) {
+//       return left(
+//         ServerFailure(S.current.unexpectedError),
+//       );
+//     }
+//   }
+// }
+
+
+
 class AuthRepoImpl extends AuthRepo {
   final FireBaseAuthService fireBaseAuthService;
 
   AuthRepoImpl({required this.fireBaseAuthService});
+
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
     String userEmail,
@@ -18,18 +49,22 @@ class AuthRepoImpl extends AuthRepo {
     String userName,
   ) async {
     try {
-      var userLogin = await fireBaseAuthService.createUserWithEmailAndPassword(
+      final userLogin = await fireBaseAuthService.createUserWithEmailAndPassword(
         email: userEmail,
         password: userPassword,
       );
 
+      if (userLogin == null) {
+        return left(ServerFailure(S.current.unexpectedError));
+      }
+
       return right(UserModel.fromFireBaseUser(userLogin));
+    } on AuthFireBasExceptions catch (e) {
+      return left(ServerFailure(e.message));
     } on CustomException catch (e) {
       return left(ServerFailure(e.exceptionMsg));
     } catch (e) {
-      return left(
-        ServerFailure(S.current.unexpectedError),
-      );
+      return left(ServerFailure(S.current.unexpectedError));
     }
   }
 }
