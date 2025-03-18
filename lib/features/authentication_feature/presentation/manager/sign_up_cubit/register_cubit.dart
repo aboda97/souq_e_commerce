@@ -20,8 +20,8 @@ class RegisterCubit extends Cubit<RegisterStates> {
     );
 
     result.fold(
-      (failure) => RegisterFailure(failure: failure),
-      (userEntity) => RegisterSuccess(userEntity: userEntity),
+      (failure) => emit (RegisterFailure(failure: failure)),
+      (userEntity) => emit(RegisterSuccess(userEntity: userEntity)) ,
     );
   }
 }

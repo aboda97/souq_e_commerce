@@ -5,6 +5,7 @@ import 'package:souq_app/core/services/fire_base_auth_service.dart';
 import 'package:souq_app/features/authentication_feature/data/models/user_model.dart';
 import 'package:souq_app/features/authentication_feature/domain/entities/user_entity.dart';
 import 'package:souq_app/features/authentication_feature/domain/repositories/auth_repo.dart';
+import 'package:souq_app/generated/l10n.dart';
 
 class AuthRepoImpl extends AuthRepo {
   final FireBaseAuthService fireBaseAuthService;
@@ -27,7 +28,7 @@ class AuthRepoImpl extends AuthRepo {
       return left(ServerFailure(e.exceptionMsg));
     } catch (e) {
       return left(
-        ServerFailure('Unexpected error occurred, please try again later.'),
+        ServerFailure(S.current.unexpectedError),
       );
     }
   }

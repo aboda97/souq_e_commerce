@@ -21,119 +21,126 @@ class RegisterViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-      children: [
-        CustomTextFormField(
-          hintText: S.of(context).fullName,
-          keyboardType: TextInputType.emailAddress,
-          validator: (value) {
-            if (value == null || value.isEmpty) {
-              return S.of(context).fieldRequired;
-            }
-            return null;
-          },
-        ),
-        const SizedBox(height: 16),
-
-        CustomTextFormField(
-          hintText: S.of(context).userEmail,
-          keyboardType: TextInputType.emailAddress,
-          validator: (value) {
-            if (value == null || value.isEmpty) {
-              return S.of(context).fieldRequired;
-            }
-            return null;
-          },
-        ),
-        const SizedBox(height: 16),
-        CustomTextFormField(
-          suffixIcon: Icons.remove_red_eye_rounded,
-          onSuffixTap: () {},
-          hintText: S.of(context).userPassword,
-          keyboardType: TextInputType.text,
-          validator: (value) {
-            if (value == null || value.isEmpty) {
-              return S.of(context).fieldRequired;
-            }
-            return null;
-          },
-        ),
-        const SizedBox(height: 16),
-        Row(
-          children: [
-            Checkbox(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(4),
-              ),
-              value: true,
-              onChanged: (bool? value) {},
-            ),
-            Expanded(
-              child: CustomTxtSpan(
-                onRegisterTap: () {},
-                textOne: S.of(context).appRulesCheckBox,
-                textTwo: S.of(context).appRulesNote,
-              ),
-            ),
-          ],
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 32),
-          child: BlocConsumer<RegisterCubit, RegisterStates>(
-            listener: (context, state) {
-              if (state is RegisterSuccess) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(S.of(context).snackBarSuccessAlert),
-                    backgroundColor: Colors.green,
-                  ),
-                );
-                Navigator.pushReplacementNamed(context, TestView.routeName);
-              } else if (state is RegisterFailure) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(state.failure.errMsg),
-                    backgroundColor: Colors.red,
-                  ),
-                );
+    return Form(
+      key: _formKey,
+      child: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+        children: [
+          CustomTextFormField(
+            controller: nameController,
+            hintText: S.of(context).fullName,
+            keyboardType: TextInputType.emailAddress,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return S.of(context).fieldRequired;
               }
-            },
-            builder: (context, state) {
-              return CustomBtnApp(
-                text: S.of(context).registerNow,
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    BlocProvider.of<RegisterCubit>(
-                      context,
-                    ).registerByEmailAndPassword(
-                      emailController.text,
-                      passwordController.text,
-                      nameController.text,
-                    );
-                  }
-                },
-                textColor: AppColors.whiteColor,
-                borderRadius: kBorderRadius,
-                elevation: 0,
-              );
+              return null;
             },
           ),
-        ),
-        Center(
-          child: CustomTxtSpan(
-            onRegisterTap: () {
-              executionPushReplacmentNamedNavigator(
-                context,
-                LoginView.routeName,
-                0,
-              );
+          const SizedBox(height: 16),
+      
+          CustomTextFormField(
+            controller: emailController,
+            hintText: S.of(context).userEmail,
+            keyboardType: TextInputType.emailAddress,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return S.of(context).fieldRequired;
+              }
+              return null;
             },
-            textOne: S.of(context).alreadyHaveAccount,
-            textTwo: S.of(context).signIn,
           ),
-        ),
-      ],
+          const SizedBox(height: 16),
+          CustomTextFormField(
+            controller: passwordController,
+            suffixIcon: Icons.remove_red_eye_rounded,
+            onSuffixTap: () {},
+            hintText: S.of(context).userPassword,
+            keyboardType: TextInputType.text,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return S.of(context).fieldRequired;
+              }
+              return null;
+            },
+          ),
+          const SizedBox(height: 16),
+          Row(
+            children: [
+              Checkbox(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                value: true,
+                onChanged: (bool? value) {},
+              ),
+              Expanded(
+                child: CustomTxtSpan(
+                  onRegisterTap: () {},
+                  textOne: S.of(context).appRulesCheckBox,
+                  textTwo: S.of(context).appRulesNote,
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 32),
+            child: BlocConsumer<RegisterCubit, RegisterStates>(
+              listener: (context, state) {
+                if (state is RegisterSuccess) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(S.of(context).snackBarSuccessAlert),
+                      backgroundColor: Colors.green,
+                    ),
+                  );
+                  Navigator.pushReplacementNamed(context, TestView.routeName);
+                } else if (state is RegisterFailure) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(state.failure.errMsg),
+                      backgroundColor: Colors.red,
+                    ),
+                  );
+                }
+              },
+              builder: (context, state) {
+                return CustomBtnApp(
+                  text: S.of(context).registerNow,
+                  isLoading: state is RegisterLoading,
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      BlocProvider.of<RegisterCubit>(
+                        context,
+                      ).registerByEmailAndPassword(
+                        emailController.text,
+                        passwordController.text,
+                        nameController.text,
+                      );
+                    }
+                  },
+                  textColor: AppColors.whiteColor,
+                  borderRadius: kBorderRadius,
+                  elevation: 0,
+                );
+              },
+            ),
+          ),
+          Center(
+            child: CustomTxtSpan(
+              onRegisterTap: () {
+                executionPushReplacmentNamedNavigator(
+                  context,
+                  LoginView.routeName,
+                  0,
+                );
+              },
+              textOne: S.of(context).alreadyHaveAccount,
+              textTwo: S.of(context).signIn,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
