@@ -21,4 +21,21 @@ class FireBaseAuthService {
       throw ServerFailure('Unexpected error: ${e.toString()}');
     }
   }
+
+  Future<User?> signInWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final credential = await _firebaseAuth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return credential.user;
+    } on FirebaseAuthException catch (e) {
+      throw AuthFireBasExceptions.fromFirebaseAuth(e);
+    } catch (e) {
+      throw ServerFailure('Unexpected error: ${e.toString()}');
+    }
+  }
 }
