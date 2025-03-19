@@ -18,5 +18,7 @@ class RegisterFailure extends RegisterStates {
 
   RegisterFailure({required this.failure});
 }
-class RegisterPasswordVisibilityChanged extends RegisterStates {
-}
+
+class RegisterPasswordVisibilityChanged extends RegisterStates {}
+
+class RegisterAgreementChanged extends RegisterStates {}

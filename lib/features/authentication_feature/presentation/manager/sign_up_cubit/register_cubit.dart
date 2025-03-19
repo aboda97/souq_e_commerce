@@ -3,18 +3,21 @@ import 'package:souq_app/core/errors/failure.dart';
 import 'package:souq_app/features/authentication_feature/domain/repositories/auth_repo.dart';
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_state.dart';
 
-
-
-
 class RegisterCubit extends Cubit<RegisterStates> {
   RegisterCubit(this.authRepo) : super(RegisterInitial());
 
   final AuthRepo authRepo;
   bool isPasswordVisible = false;
+  bool isAgreementChecked = false;
   void togglePasswordVisibility() {
-  isPasswordVisible = !isPasswordVisible;
-  emit(RegisterPasswordVisibilityChanged());
-}
+    isPasswordVisible = !isPasswordVisible;
+    emit(RegisterPasswordVisibilityChanged());
+  }
+
+  void toggleAgreementCheckbox() {
+    isAgreementChecked = !isAgreementChecked;
+    emit(RegisterAgreementChanged());
+  }
 
   Future<void> registerByEmailAndPassword(
     String email,

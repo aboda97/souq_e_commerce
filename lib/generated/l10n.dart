@@ -290,6 +290,16 @@ class S {
     );
   }
 
+  /// `You must Accept Terms`
+  String get shouldAcceptTerms {
+    return Intl.message(
+      'You must Accept Terms',
+      name: 'shouldAcceptTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
   // skipped getter for the 'don\'tWorryForForgettingPassword' key
 
   /// `The email address is not valid.`

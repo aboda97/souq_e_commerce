@@ -71,7 +71,8 @@ class RegisterViewBody extends StatelessWidget {
               const SizedBox(height: 16),
               CustomTextFormField(
                 controller: passwordController,
-                obscureText: !BlocProvider.of<RegisterCubit>(context).isPasswordVisible,
+                obscureText:
+                    !BlocProvider.of<RegisterCubit>(context).isPasswordVisible,
                 suffixIcon:
                     BlocProvider.of<RegisterCubit>(context).isPasswordVisible
                         ? Icons.remove_red_eye_rounded
@@ -92,7 +93,15 @@ class RegisterViewBody extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 16),
-              buildAgreementCheckbox(context),
+              BuildAgreementCheckbox(
+                value:
+                    BlocProvider.of<RegisterCubit>(context).isAgreementChecked,
+                onChanged: (bool? value) {
+                  BlocProvider.of<RegisterCubit>(
+                    context,
+                  ).toggleAgreementCheckbox();
+                },
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 32),
                 child: CustomBtnApp(
@@ -106,6 +115,15 @@ class RegisterViewBody extends StatelessWidget {
                             passwordController.text,
                             nameController.text,
                           );
+                    }
+                    if (!BlocProvider.of<RegisterCubit>(
+                      context,
+                    ).isAgreementChecked) {
+                      showSnackBar(
+                        context,
+                        S.of(context).shouldAcceptTerms,
+                        Colors.red,
+                      );
                     }
                   },
                   textColor: AppColors.whiteColor,

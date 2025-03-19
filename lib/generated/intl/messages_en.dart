@@ -99,6 +99,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "sendTimeout": MessageLookupByLibrary.simpleMessage(
       "Request sending timeout",
     ),
+    "shouldAcceptTerms": MessageLookupByLibrary.simpleMessage(
+      "You must Accept Terms",
+    ),
     "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signInByApple": MessageLookupByLibrary.simpleMessage("Sign in by Apple"),
     "signInByFacebook": MessageLookupByLibrary.simpleMessage(

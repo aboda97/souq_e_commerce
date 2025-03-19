@@ -92,6 +92,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "sendTimeout": MessageLookupByLibrary.simpleMessage(
       "انتهت مهلة إرسال الطلب",
     ),
+    "shouldAcceptTerms": MessageLookupByLibrary.simpleMessage(
+      "يجب عليك الموافقة علي الشروط والأحكام",
+    ),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "signInByApple": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بواسطة آبل",

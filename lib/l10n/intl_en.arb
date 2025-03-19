@@ -27,6 +27,7 @@
     "signInByFacebook": "Sign in by Facebook",
     "appRulesCheckBox": "By creating an account, you agree to",
     "appRulesNote": "Our Terms and Conditions",
+    "shouldAcceptTerms": "You must Accept Terms",
     "don'tWorryForForgettingPassword": "Don't worry, just enter your phone number and we'll send you a verification code.",
     "invalidEmail": "The email address is not valid.",
     "userNotFound": "No user found with this email.",
