@@ -254,12 +254,16 @@ class LoginViewBody extends StatelessWidget {
               CustomLoginSocial(
                 assetIconPath: AssetsPaths.appleIconPath,
                 title: S.of(context).signInByApple,
-                onPressed: () {},
+                onPressed: () {
+                  BlocProvider.of<LoginCubit>(context).signInWithApple();
+                },
               ),
               CustomLoginSocial(
                 assetIconPath: AssetsPaths.facebookIconPath,
                 title: S.of(context).signInByFacebook,
-                onPressed: () {},
+                onPressed: () {
+                  BlocProvider.of<LoginCubit>(context).signInWithFacebook();
+                },
               ),
             ],
           ),

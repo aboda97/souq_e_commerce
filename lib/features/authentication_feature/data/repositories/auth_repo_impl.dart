@@ -83,4 +83,42 @@ class AuthRepoImpl extends AuthRepo {
       return left(ServerFailure(S.current.unexpectedError));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async {
+    try {
+      final userLogin = await fireBaseAuthService.signInWithFacebook();
+
+      if (userLogin == null) {
+        return left(ServerFailure(S.current.unexpectedError));
+      }
+
+      return right(UserModel.fromFireBaseUser(userLogin));
+    } on AuthFireBasExceptions catch (e) {
+      return left(ServerFailure(e.message));
+    } on CustomException catch (e) {
+      return left(ServerFailure(e.exceptionMsg));
+    } catch (e) {
+      return left(ServerFailure(S.current.unexpectedError));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithApple() async {
+    try {
+      final userLogin = await fireBaseAuthService.signInWithApple();
+
+      if (userLogin == null) {
+        return left(ServerFailure(S.current.unexpectedError));
+      }
+
+      return right(UserModel.fromFireBaseUser(userLogin));
+    } on AuthFireBasExceptions catch (e) {
+      return left(ServerFailure(e.message));
+    } on CustomException catch (e) {
+      return left(ServerFailure(e.exceptionMsg));
+    } catch (e) {
+      return left(ServerFailure(S.current.unexpectedError));
+    }
+  }
 }
