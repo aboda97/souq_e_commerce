@@ -64,4 +64,23 @@ class AuthRepoImpl extends AuthRepo {
       return left(ServerFailure(S.current.unexpectedError));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+    try {
+      final userLogin = await fireBaseAuthService.signInWithGoogle();
+
+      if (userLogin == null) {
+        return left(ServerFailure(S.current.unexpectedError));
+      }
+
+      return right(UserModel.fromFireBaseUser(userLogin));
+    } on AuthFireBasExceptions catch (e) {
+      return left(ServerFailure(e.message));
+    } on CustomException catch (e) {
+      return left(ServerFailure(e.exceptionMsg));
+    } catch (e) {
+      return left(ServerFailure(S.current.unexpectedError));
+    }
+  }
 }
