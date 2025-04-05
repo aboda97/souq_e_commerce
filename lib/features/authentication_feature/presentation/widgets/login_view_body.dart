@@ -1,16 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:souq_app/constants.dart';
-// import 'package:souq_app/core/components/custom_btn.dart';
-// import 'package:souq_app/core/components/custom_login_social.dart';
-// import 'package:souq_app/core/components/custom_text_form_field.dart';
-// import 'package:souq_app/core/components/custom_text_span.dart';
-// import 'package:souq_app/core/helper_functions/excution_navigator.dart';
-// import 'package:souq_app/core/utils/app_colors.dart';
-// import 'package:souq_app/core/utils/app_styles.dart';
-// import 'package:souq_app/core/utils/assets_paths.dart';
-// import 'package:souq_app/features/authentication_feature/presentation/views/register_view.dart';
-// import 'package:souq_app/generated/l10n.dart';
-
 // class LoginViewBody extends StatelessWidget {
 //   const LoginViewBody({super.key});
 
