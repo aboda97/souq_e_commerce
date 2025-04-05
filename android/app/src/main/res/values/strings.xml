@@ -1,0 +1,7 @@
+
+<resources>
+<string name="app_name">Souq E-Commerce</string>
+<string name="facebook_app_id">4075834572689923</string>
+<string name="fb_login_protocol_scheme">fb1234</string>
+<string name="facebook_client_token">029c8954de1f4526055c97ed100d7dd7</string>
+</resources>
