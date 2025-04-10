@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.souq_app"
     
-    compileSdk = 34  // ✅ FIXED: Correct Kotlin DSL syntax
+    compileSdk = 35  // ✅ FIXED: Correct Kotlin DSL syntax
 
     ndkVersion = "27.0.12077973" // ✅ FIXED: Removed quotes (must be a number, not a string)
 
