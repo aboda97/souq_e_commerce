@@ -3,6 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:souq_app/core/localization/language_cubit.dart';
 import 'package:souq_app/core/services/bloc_observer.dart';
 import 'package:souq_app/core/services/fire_base_auth_service.dart';
+import 'package:souq_app/core/services/fire_data_base_service.dart';
+import 'package:souq_app/core/services/flutter_fire_store_service.dart';
 import 'package:souq_app/features/authentication_feature/data/repositories/auth_repo_impl.dart';
 import 'package:souq_app/features/authentication_feature/domain/repositories/auth_repo.dart';
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_in_cubit/login_cubit.dart';
@@ -21,6 +23,9 @@ Future<void> setupLocator() async {
   serviceLocator.registerLazySingleton<FireBaseAuthService>(
     () => FireBaseAuthService(),
   );
+  serviceLocator.registerLazySingleton<FireDataBaseService>(
+    () => FlutterFireStoreService(),
+  );
 
   //-----------------> CUBITS  <-----------------//
   serviceLocator.registerLazySingleton<LanguageCubit>(() => LanguageCubit());
@@ -35,6 +40,7 @@ Future<void> setupLocator() async {
   serviceLocator.registerLazySingleton<AuthRepo>(
     () => AuthRepoImpl(
       fireBaseAuthService: serviceLocator<FireBaseAuthService>(),
+      fireDataBaseService: serviceLocator<FireDataBaseService>(),
     ),
   );
 

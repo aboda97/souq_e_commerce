@@ -15,4 +15,10 @@ class UserModel extends UserEntity {
       userName: user.displayName ?? '',
     );
   }
+  
+  factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
+    userId: json['userId'] as String,
+    userName: json['userName'] as String,
+    userEmail: json['userEmail'] as String,
+  );
 }

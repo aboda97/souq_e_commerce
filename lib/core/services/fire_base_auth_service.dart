@@ -137,4 +137,13 @@ class FireBaseAuthService {
     final digest = sha256.convert(bytes);
     return digest.toString();
   }
+  Future deleteUser() async {
+    try {
+      await _firebaseAuth.currentUser!.delete();
+    } on FirebaseAuthException catch (e) {
+      throw AuthFireBasExceptions.fromFirebaseAuth(e);
+    } catch (e) {
+      throw ServerFailure('Unexpected error: ${e.toString()}');
+    }
+  }
 }
