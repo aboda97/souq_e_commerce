@@ -70,27 +70,52 @@ class FireBaseAuthService {
     }
   }
 
-  Future<User?> signInWithFacebook() async {
-    try {
-      final LoginResult loginResult = await FacebookAuth.instance.login();
-      if (loginResult.status != LoginStatus.success ||
-          loginResult.accessToken == null) {
-        return null;
-      }
+  // Future<User?> signInWithFacebook() async {
+  //   try {
+  //     final LoginResult loginResult = await FacebookAuth.instance.login();
+  //     if (loginResult.status != LoginStatus.success ||
+  //         loginResult.accessToken == null) {
+  //       return null;
+  //     }
 
-      final OAuthCredential facebookAuthCredential =
-          FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
+  //     final OAuthCredential facebookAuthCredential =
+  //         FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
 
-      final UserCredential userCredential = await _firebaseAuth
-          .signInWithCredential(facebookAuthCredential);
+  //     final UserCredential userCredential = await _firebaseAuth
+  //         .signInWithCredential(facebookAuthCredential);
 
-      return userCredential.user;
-    } on FirebaseAuthException catch (e) {
-      throw AuthFireBasExceptions.fromFirebaseAuth(e);
-    } catch (e) {
-      throw ServerFailure('Unexpected error: ${e.toString()}');
+  //     return userCredential.user;
+  //   } on FirebaseAuthException catch (e) {
+  //     throw AuthFireBasExceptions.fromFirebaseAuth(e);
+  //   } catch (e) {
+  //     throw ServerFailure('Unexpected error: ${e.toString()}');
+  //   }
+  // }
+
+Future<User?> signInWithFacebook() async {
+  try {
+    final LoginResult loginResult = await FacebookAuth.instance.login(
+      permissions: ['email', 'public_profile'],
+    );
+
+    if (loginResult.status != LoginStatus.success ||
+        loginResult.accessToken == null) {
+      return null;
     }
+
+    final OAuthCredential facebookAuthCredential =
+        FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
+
+    final UserCredential userCredential = await _firebaseAuth
+        .signInWithCredential(facebookAuthCredential);
+
+    return userCredential.user;
+  } on FirebaseAuthException catch (e) {
+    throw AuthFireBasExceptions.fromFirebaseAuth(e);
+  } catch (e) {
+    throw ServerFailure('Unexpected error: ${e.toString()}');
   }
+}
 
   Future<User?> signInWithApple() async {
     try {

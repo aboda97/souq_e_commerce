@@ -70,14 +70,14 @@ class AuthRepoImpl extends AuthRepo {
   ) async {
     User? userLogin;
     try {
-      final userLogin = await fireBaseAuthService.signInWithEmailAndPassword(
+     userLogin = await fireBaseAuthService.signInWithEmailAndPassword(
         email: userEmail,
         password: userPassword,
       );
-       // if (userLogin == null) {
-      //   return left(ServerFailure(S.current.unexpectedError));
-      // }
-      var userEntity = await getUserData(userId: userLogin!.uid);
+       if (userLogin == null) {
+        return left(ServerFailure(S.current.unexpectedError));
+      }
+      var userEntity = await getUserData(userId: userLogin.uid);
      
       // return right(UserModel.fromFireBaseUser(userLogin));
       return right(userEntity);

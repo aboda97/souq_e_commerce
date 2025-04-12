@@ -94,6 +94,7 @@
 //     );
 //   }
 // }
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:souq_app/constants.dart';
@@ -248,8 +249,9 @@ class LoginViewBody extends StatelessWidget {
               CustomLoginSocial(
                 assetIconPath: AssetsPaths.facebookIconPath,
                 title: S.of(context).signInByFacebook,
-                onPressed: () {
+                onPressed: () async {
                   BlocProvider.of<LoginCubit>(context).signInWithFacebook();
+                 
                 },
               ),
             ],
