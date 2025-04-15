@@ -36,6 +36,7 @@ class CustomTextFormField extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: obscureText,
       validator: validator,
+      
       //    readOnly: readOnly,
       onSaved: onSaved,
       decoration: InputDecoration(

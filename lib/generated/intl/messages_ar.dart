@@ -57,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "generalError": MessageLookupByLibrary.simpleMessage(
       "عذرًا! حدث خطأ، يرجى المحاولة لاحقًا",
     ),
+    "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
     "internalServerError": MessageLookupByLibrary.simpleMessage(
       "خطأ داخلي في الخادم",
     ),
@@ -89,6 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "registerNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب الآن"),
     "requestCancelled": MessageLookupByLibrary.simpleMessage("تم إلغاء الطلب"),
     "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+    "searchForHome": MessageLookupByLibrary.simpleMessage("ابحث عن..."),
     "sendTimeout": MessageLookupByLibrary.simpleMessage(
       "انتهت مهلة إرسال الطلب",
     ),
@@ -124,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "لم يتم العثور على مستخدم بهذا البريد الإلكتروني.",
     ),
     "userPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "userProfileName": MessageLookupByLibrary.simpleMessage("أحمد عبودة"),
     "weakPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور ضعيفة جدًا.",
     ),

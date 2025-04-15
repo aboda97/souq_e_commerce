@@ -47,5 +47,8 @@
     "notFound": "الطلب غير موجود",
     "internalServerError": "خطأ داخلي في الخادم",
     "generalError": "عذرًا! حدث خطأ، يرجى المحاولة لاحقًا",
-    "snackBarSuccessAlert": "عمل جيد, لقد قمت بالتسجيل معنا"
+    "snackBarSuccessAlert": "عمل جيد, لقد قمت بالتسجيل معنا",
+    "goodMorning": "صباح الخير !..",
+    "userProfileName": "أحمد عبودة",
+    "searchForHome" : "ابحث عن..."
 }

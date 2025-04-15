@@ -9,3 +9,15 @@ void executionPushReplacmentNamedNavigator(
     Navigator.pushReplacementNamed(context, routeName);
   });
 }
+
+void executionPushNamedNavigator(
+  BuildContext context,
+  String routeName,
+  int delayInSeconds,
+) {
+  Future.delayed(Duration(seconds: delayInSeconds), () {
+    Navigator.pushNamed(context, routeName);
+  });
+}
+
+

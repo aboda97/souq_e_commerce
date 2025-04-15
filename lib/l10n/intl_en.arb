@@ -47,5 +47,9 @@
     "notFound": "Request not found",
     "internalServerError": "Internal server error",
     "generalError": "Oops! Something went wrong, please try again later",
-    "snackBarSuccessAlert": "Good job, you are Registered"
+    "snackBarSuccessAlert": "Good job, you are Registered",
+    "goodMorning": "Good Morning...!",
+    "userProfileName": "Ahmed Aboda",
+    "searchForHome" : "Search for..."
+
 }

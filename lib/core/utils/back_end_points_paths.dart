@@ -1,5 +1,5 @@
 class BackEndPointsPaths {
 static const addUsersData = 'addUsersData';
-static const getUsersData = 'getUsersData';
-static const isUserExist = 'isUserExist';
+static const getUsersData = 'addUsersData';
+static const isUserExist = 'addUsersData';
 }

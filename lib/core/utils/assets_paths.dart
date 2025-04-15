@@ -12,4 +12,8 @@ class AssetsPaths {
   static String appleIconPath = 'assets/images/apple.svg';
   static String googleIconPath = 'assets/images/google.svg';
   static String facebookIconPath = 'assets/images/fb.svg';
+  static String appFruitBgPath = 'assets/images/fruit_bg.svg';
+  static String appGreenBgPath = 'assets/images/green_bg.svg';
+  static String appProfileImgPath = 'assets/images/profile_img.png';
+  
 }

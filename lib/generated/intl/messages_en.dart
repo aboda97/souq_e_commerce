@@ -62,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "generalError": MessageLookupByLibrary.simpleMessage(
       "Oops! Something went wrong, please try again later",
     ),
+    "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning...!"),
     "internalServerError": MessageLookupByLibrary.simpleMessage(
       "Internal server error",
     ),
@@ -96,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Request was cancelled",
     ),
     "save": MessageLookupByLibrary.simpleMessage("Save"),
+    "searchForHome": MessageLookupByLibrary.simpleMessage("Search for..."),
     "sendTimeout": MessageLookupByLibrary.simpleMessage(
       "Request sending timeout",
     ),
@@ -127,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "No user found with this email.",
     ),
     "userPassword": MessageLookupByLibrary.simpleMessage("Password"),
+    "userProfileName": MessageLookupByLibrary.simpleMessage("Ahmed Aboda"),
     "weakPassword": MessageLookupByLibrary.simpleMessage(
       "The password is too weak.",
     ),

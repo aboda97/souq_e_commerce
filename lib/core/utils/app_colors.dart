@@ -7,4 +7,6 @@ abstract class AppColors {
   static const Color lightSecondaryColor = Color(0xFFF8C76D);
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color outLineBorderTxtFormField = Color(0xFFE6E9E9);
+  static const Color appBgColor = Color(0xFFEEF8ED);
+  
 }
