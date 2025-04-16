@@ -16,6 +16,9 @@ class AssetsPaths {
   static String appGreenBgPath = 'assets/images/green_bg.svg';
   static String appProfileImgPath = 'assets/images/profile_img.png';
   static String appBgFruitNewPath = 'assets/images/fruit_bg_new.png';
+  static String appStrawberryFruitPath = 'assets/images/Strawberry.png';
+  static String appwatermelonFruitPath = 'assets/images/watermelon.png';
+  static String appbananaFruitPath = 'assets/images/banana.png';
   
 
   

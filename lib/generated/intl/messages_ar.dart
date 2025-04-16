@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Strawberry": MessageLookupByLibrary.simpleMessage("فراولة"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل",
     ),
@@ -36,16 +37,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "badCertificate": MessageLookupByLibrary.simpleMessage(
       "شهادة غير صالحة من الخادم",
     ),
+    "banana": MessageLookupByLibrary.simpleMessage("موز"),
     "body": MessageLookupByLibrary.simpleMessage("مرحبا بك في النسخة العربية"),
+    "commonSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
     "connectionError": MessageLookupByLibrary.simpleMessage(
       "لا يوجد اتصال بالإنترنت",
     ),
     "connectionTimeout": MessageLookupByLibrary.simpleMessage(
       "انتهت مهلة الاتصال بالخادم",
     ),
+    "discount": MessageLookupByLibrary.simpleMessage("خصم 25%"),
     "doNotHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لا تمتلك حساب ؟ ",
     ),
+    "eidOffer": MessageLookupByLibrary.simpleMessage("عروض العيد"),
     "emailInUse": MessageLookupByLibrary.simpleMessage(
       "هذا البريد الإلكتروني مسجل بالفعل.",
     ),
@@ -67,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "makeNewPassword": MessageLookupByLibrary.simpleMessage(
       "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
     ),
+    "moreThan": MessageLookupByLibrary.simpleMessage("المزيذ"),
     "networkError": MessageLookupByLibrary.simpleMessage(
       "لا يوجد اتصال بالإنترنت. يرجى التحقق من الشبكة.",
     ),
@@ -89,11 +95,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "registerNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب الآن"),
     "requestCancelled": MessageLookupByLibrary.simpleMessage("تم إلغاء الطلب"),
+    "salary": MessageLookupByLibrary.simpleMessage("جنية/كيلو"),
     "save": MessageLookupByLibrary.simpleMessage("حفظ"),
     "searchForHome": MessageLookupByLibrary.simpleMessage("ابحث عن..."),
     "sendTimeout": MessageLookupByLibrary.simpleMessage(
       "انتهت مهلة إرسال الطلب",
     ),
+    "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الآن"),
     "shouldAcceptTerms": MessageLookupByLibrary.simpleMessage(
       "يجب عليك الموافقة علي الشروط والأحكام",
     ),
@@ -127,6 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "userPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "userProfileName": MessageLookupByLibrary.simpleMessage("أحمد عبودة"),
+    "watermelon": MessageLookupByLibrary.simpleMessage("بطيخ"),
     "weakPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور ضعيفة جدًا.",
     ),

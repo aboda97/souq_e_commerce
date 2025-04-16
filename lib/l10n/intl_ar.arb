@@ -50,5 +50,14 @@
     "snackBarSuccessAlert": "عمل جيد, لقد قمت بالتسجيل معنا",
     "goodMorning": "صباح الخير !..",
     "userProfileName": "أحمد عبودة",
-    "searchForHome" : "ابحث عن..."
+    "searchForHome" : "ابحث عن...",
+    "eidOffer":"عروض العيد",
+    "discount":"خصم 25%",
+    "shopNow":"تسوق الآن",
+    "commonSelling":"الأكثر مبيعاً",
+    "moreThan":"المزيذ",
+    "Strawberry":"فراولة",
+    "watermelon":"بطيخ",
+    "banana":"موز",
+    "salary":"جنية/كيلو"
 }

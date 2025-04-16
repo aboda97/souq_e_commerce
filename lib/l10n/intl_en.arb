@@ -50,6 +50,14 @@
     "snackBarSuccessAlert": "Good job, you are Registered",
     "goodMorning": "Good Morning...!",
     "userProfileName": "Ahmed Aboda",
-    "searchForHome" : "Search for..."
-
+    "searchForHome" : "Search for...",
+    "eidOffer":"Eid Offer",
+    "discount":"Discount 25%",
+    "shopNow":"Shop Now",
+    "commonSelling":"Common Selling",
+    "moreThan":"More",
+    "Strawberry":"Strawberry",
+    "watermelon":"watermelon",
+    "banana":"banana",
+    "salary":"LE/Kilo"
 }

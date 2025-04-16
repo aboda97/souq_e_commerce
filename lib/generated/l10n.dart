@@ -521,6 +521,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Eid Offer`
+  String get eidOffer {
+    return Intl.message('Eid Offer', name: 'eidOffer', desc: '', args: []);
+  }
+
+  /// `Discount 25%`
+  String get discount {
+    return Intl.message('Discount 25%', name: 'discount', desc: '', args: []);
+  }
+
+  /// `Shop Now`
+  String get shopNow {
+    return Intl.message('Shop Now', name: 'shopNow', desc: '', args: []);
+  }
+
+  /// `Common Selling`
+  String get commonSelling {
+    return Intl.message(
+      'Common Selling',
+      name: 'commonSelling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More`
+  String get moreThan {
+    return Intl.message('More', name: 'moreThan', desc: '', args: []);
+  }
+
+  /// `Strawberry`
+  String get Strawberry {
+    return Intl.message('Strawberry', name: 'Strawberry', desc: '', args: []);
+  }
+
+  /// `watermelon`
+  String get watermelon {
+    return Intl.message('watermelon', name: 'watermelon', desc: '', args: []);
+  }
+
+  /// `banana`
+  String get banana {
+    return Intl.message('banana', name: 'banana', desc: '', args: []);
+  }
+
+  /// `LE/Kilo`
+  String get salary {
+    return Intl.message('LE/Kilo', name: 'salary', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Strawberry": MessageLookupByLibrary.simpleMessage("Strawberry"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already Have an Account",
     ),
@@ -37,18 +38,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "badCertificate": MessageLookupByLibrary.simpleMessage(
       "Invalid certificate from the server",
     ),
+    "banana": MessageLookupByLibrary.simpleMessage("banana"),
     "body": MessageLookupByLibrary.simpleMessage(
       " Welcome to Flutter Localization Demo",
     ),
+    "commonSelling": MessageLookupByLibrary.simpleMessage("Common Selling"),
     "connectionError": MessageLookupByLibrary.simpleMessage(
       "No internet connection",
     ),
     "connectionTimeout": MessageLookupByLibrary.simpleMessage(
       "Connection timeout with the server",
     ),
+    "discount": MessageLookupByLibrary.simpleMessage("Discount 25%"),
     "doNotHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t Have an Account ? ",
     ),
+    "eidOffer": MessageLookupByLibrary.simpleMessage("Eid Offer"),
     "emailInUse": MessageLookupByLibrary.simpleMessage(
       "This email is already registered.",
     ),
@@ -72,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "makeNewPassword": MessageLookupByLibrary.simpleMessage(
       "Create a new password to log in",
     ),
+    "moreThan": MessageLookupByLibrary.simpleMessage("More"),
     "networkError": MessageLookupByLibrary.simpleMessage(
       "No internet connection. Please check your network.",
     ),
@@ -96,11 +102,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "requestCancelled": MessageLookupByLibrary.simpleMessage(
       "Request was cancelled",
     ),
+    "salary": MessageLookupByLibrary.simpleMessage("LE/Kilo"),
     "save": MessageLookupByLibrary.simpleMessage("Save"),
     "searchForHome": MessageLookupByLibrary.simpleMessage("Search for..."),
     "sendTimeout": MessageLookupByLibrary.simpleMessage(
       "Request sending timeout",
     ),
+    "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "shouldAcceptTerms": MessageLookupByLibrary.simpleMessage(
       "You must Accept Terms",
     ),
@@ -130,6 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "userPassword": MessageLookupByLibrary.simpleMessage("Password"),
     "userProfileName": MessageLookupByLibrary.simpleMessage("Ahmed Aboda"),
+    "watermelon": MessageLookupByLibrary.simpleMessage("watermelon"),
     "weakPassword": MessageLookupByLibrary.simpleMessage(
       "The password is too weak.",
     ),
