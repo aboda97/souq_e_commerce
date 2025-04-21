@@ -19,8 +19,12 @@ class AssetsPaths {
   static String appStrawberryFruitPath = 'assets/images/Strawberry.png';
   static String appwatermelonFruitPath = 'assets/images/watermelon.png';
   static String appbananaFruitPath = 'assets/images/banana.png';
-  
-
-  
-  
+  static String appNavBarActiveProfilePngPath = 'assets/images/vuesax/active/profile.png';
+  static String appNavBarDeActiveProfilePngPath = 'assets/images/vuesax/de_active/profile.png';
+  static String appNavBarActiveProductPngPath = 'assets/images/vuesax/active/product.png';
+  static String appNavBarDeActiveProductPngPath = 'assets/images/vuesax/de_active/product.png';
+  static String appNavBarActiveShopCartPngPath = 'assets/images/vuesax/active/shopping-cart.png';
+  static String appNavBarDeActiveShopCartPngPath = 'assets/images/vuesax/de_active/shopping-cart.png';
+  static String appNavBarActiveHomePngPath = 'assets/images/vuesax/active/home.png';
+  static String appNavBarDeActiveHomePngPath = 'assets/images/vuesax/de_active/home.png';
 }
