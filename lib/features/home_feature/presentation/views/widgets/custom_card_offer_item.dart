@@ -11,27 +11,25 @@ class CustomCardOfferItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withValues(alpha: .5),
-            spreadRadius: 2,
-            blurRadius: 7,
-            offset: const Offset(0, 3),
-          ),
-        ],
-      ),
+    return AspectRatio(
+      aspectRatio: 342 / 158,
       child: Stack(
         children: [
-          Image.asset(AssetsPaths.appBgFruitNewPath),
-          SvgPicture.asset(AssetsPaths.appGreenBgPath),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 32,vertical: 16),
-            width: MediaQuery.of(context).size.width/2,
+          Positioned(
+            left: 0,
+            top: 0,
+            bottom: 0,
+            child: Image.asset(AssetsPaths.appBgFruitNewPath),
+          ),
+          Positioned(
+            right: 0,
+            bottom: 0,
+            top: 0,
+            child: SvgPicture.asset(AssetsPaths.appGreenBgPath),
+          ),
+          Positioned(
+            right: 30,
+            top: 30,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -41,14 +39,16 @@ class CustomCardOfferItem extends StatelessWidget {
                     color: AppColors.whiteColor,
                   ),
                 ),
-                SizedBox(height: 8,),
+                SizedBox(height: 8),
                 Text(
                   S.of(context).discount,
-                  style: TextStyles.bold19.copyWith(color: AppColors.whiteColor),
+                  style: TextStyles.bold19.copyWith(
+                    color: AppColors.whiteColor,
+                  ),
                 ),
-                SizedBox(height: 8,),
+                SizedBox(height: 8),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width*.3,
+                  width: MediaQuery.of(context).size.width * .25,
                   child: CustomBtnApp(
                     text: S.of(context).shopNow,
                     onPressed: () {},
