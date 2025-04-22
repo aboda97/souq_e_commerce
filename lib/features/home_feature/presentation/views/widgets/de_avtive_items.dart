@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class DeActiveItem extends StatelessWidget {
   const DeActiveItem({super.key, required this.imagePath});
@@ -8,6 +7,8 @@ class DeActiveItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 30,
+      height: 30,
       color: Colors.transparent,
       child: Image.asset(imagePath),
     );

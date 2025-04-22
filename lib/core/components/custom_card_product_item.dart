@@ -10,7 +10,7 @@ class CustomCardProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 8,right: 8),
+      padding: const EdgeInsets.only(top: 8),
       decoration: BoxDecoration(
         color: AppColors.appCardGeryBgColor,
         borderRadius: BorderRadius.circular(4),
@@ -20,7 +20,10 @@ class CustomCardProductItem extends StatelessWidget {
           Positioned(
             top: 0,
             right: 0,
-            child: Icon(Icons.favorite_border_outlined),
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.favorite_border_outlined, color: Colors.black),
+            ),
           ),
           Positioned.fill(
             child: Column(
@@ -33,25 +36,30 @@ class CustomCardProductItem extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+                SizedBox(height: 28),
                 ListTile(
                   title: Text(
                     S.of(context).Strawberry,
                     style: TextStyles.bold16,
                   ),
-                  subtitle: Text.rich(TextSpan(
-                    children: [
-                      TextSpan(
-                    text: "20",style: TextStyles.semiBold16.copyWith(color: AppColors.secondaryColor),
-                  ),
-                  TextSpan(
-                    text: " ",
-                  ),
-                  TextSpan(
-                  text:  S.of(context).salary,
-                    style: TextStyles.semiBold16.copyWith(color: AppColors.secondaryColor),
-                  ),
-                    ]
-                  )
+                  subtitle: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "20",
+                          style: TextStyles.bold19.copyWith(
+                            color: AppColors.secondaryColor,
+                          ),
+                        ),
+                        TextSpan(text: " "),
+                        TextSpan(
+                          text: S.of(context).salary,
+                          style: TextStyles.semiBold16.copyWith(
+                            color: AppColors.secondaryColor,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   trailing: CircleAvatar(
                     backgroundColor: AppColors.primaryColor,

@@ -1,8 +1,6 @@
 
-
-
 import 'package:flutter/material.dart';
-import 'package:souq_app/features/home_feature/domain/entity/bottom_navigation_bar_entity.dart';
+import 'package:souq_app/features/home_feature/domain/entities/bottom_navigation_bar_entity.dart';
 import 'package:souq_app/features/home_feature/presentation/views/widgets/active_items.dart';
 import 'package:souq_app/features/home_feature/presentation/views/widgets/de_avtive_items.dart';
 
@@ -19,10 +17,10 @@ class NaivgationBarItem extends StatelessWidget {
     return isSelected
         ? ActiveItem(
             image: bottomNavigationBarEntity.activeImage,
-            text: bottomNavigationBarEntity.name,
+            text: bottomNavigationBarEntity.labelName,
           )
         : DeActiveItem(
-            imagePath: bottomNavigationBarEntity.inActiveImage,
+            imagePath: bottomNavigationBarEntity.deActiveImage,
           );
   }
 }

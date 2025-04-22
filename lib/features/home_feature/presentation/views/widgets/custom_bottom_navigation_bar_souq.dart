@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:souq_app/features/home_feature/domain/entity/bottom_navigation_bar_entity.dart';
+import 'package:souq_app/features/home_feature/domain/entities/bottom_navigation_bar_entity.dart';
 import 'package:souq_app/features/home_feature/presentation/views/widgets/navigation_bar_item.dart';
 
 class CustomBottomNavigationBarSouq extends StatefulWidget {
@@ -35,7 +35,7 @@ class _CustomBottomNavigationBarSouqState extends State<CustomBottomNavigationBa
         ],
       ),
       child: Row(
-        children: bottomNavigationBarItems.asMap().entries.map((e) {
+        children: bottomNavigationBarListItems.asMap().entries.map((e) {
           var index = e.key;
           var entity = e.value;
 

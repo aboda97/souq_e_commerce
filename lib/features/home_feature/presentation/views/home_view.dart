@@ -15,7 +15,14 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CustomBottomNavigationBar(),
+      bottomNavigationBar: CustomBottomNavigationBar(
+        currentIndex: currentViewIndex,
+        onItemTapped: (index){
+           currentViewIndex = index;
+         //  print(currentViewIndex);
+            setState(() {});
+        },
+      ),
       body: SafeArea(child: HomeViewBody(),
     ),
     

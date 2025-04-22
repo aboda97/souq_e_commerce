@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:souq_app/core/utils/app_colors.dart';
 import 'package:souq_app/core/utils/app_styles.dart';
 
@@ -24,15 +23,16 @@ class ActiveItem extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              width: 30,
-              height: 30,
+              padding: EdgeInsets.all(8),
+              width: 40,
+              height: 40,
               decoration: ShapeDecoration(
                 color: const Color(0xFF1B5E37),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
               ),
-              child: Center(child: SvgPicture.asset(image)),
+              child: Image.asset(image,),
             ),
             const SizedBox(
               width: 4,
@@ -40,7 +40,7 @@ class ActiveItem extends StatelessWidget {
             Text(
               text,
               style:
-                  TextStyles.semiBold11.copyWith(color: AppColors.primaryColor),
+                  TextStyles.semiBold16.copyWith(color: AppColors.primaryColor),
             )
           ],
         ),
