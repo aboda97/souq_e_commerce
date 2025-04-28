@@ -571,6 +571,11 @@ class S {
   String get salary {
     return Intl.message('LE/Kilo', name: 'salary', desc: '', args: []);
   }
+
+  /// `Search`
+  String get search {
+    return Intl.message('Search', name: 'search', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

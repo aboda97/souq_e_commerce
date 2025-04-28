@@ -97,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "requestCancelled": MessageLookupByLibrary.simpleMessage("تم إلغاء الطلب"),
     "salary": MessageLookupByLibrary.simpleMessage("جنية/كيلو"),
     "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+    "search": MessageLookupByLibrary.simpleMessage("البحث"),
     "searchForHome": MessageLookupByLibrary.simpleMessage("ابحث عن..."),
     "sendTimeout": MessageLookupByLibrary.simpleMessage(
       "انتهت مهلة إرسال الطلب",

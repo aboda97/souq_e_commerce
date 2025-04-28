@@ -104,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "salary": MessageLookupByLibrary.simpleMessage("LE/Kilo"),
     "save": MessageLookupByLibrary.simpleMessage("Save"),
+    "search": MessageLookupByLibrary.simpleMessage("Search"),
     "searchForHome": MessageLookupByLibrary.simpleMessage("Search for..."),
     "sendTimeout": MessageLookupByLibrary.simpleMessage(
       "Request sending timeout",
