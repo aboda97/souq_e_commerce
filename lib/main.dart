@@ -51,9 +51,9 @@ class SouqApp extends StatelessWidget {
             title: 'Souq App',
             onGenerateRoute: onGenerateRoute,
             // initialRoute: SplashView.routeName,
-           // initialRoute: HomeView.routeName,
+            initialRoute: HomeView.routeName,
            // initialRoute: BestSellingView.routeName,
-            initialRoute: SearchView.routeName,
+           // initialRoute: SearchView.routeName,
           );
         },
       ),

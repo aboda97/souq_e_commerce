@@ -171,4 +171,6 @@ Future<User?> signInWithFacebook() async {
       throw ServerFailure('Unexpected error: ${e.toString()}');
     }
   }
+
+  bool isUserSignedIn() => _firebaseAuth.currentUser != null;
 }

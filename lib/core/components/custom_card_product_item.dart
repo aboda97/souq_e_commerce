@@ -46,7 +46,7 @@ class CustomCardProductItem extends StatelessWidget {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: "20",
+                          text: "35",
                           style: TextStyles.bold19.copyWith(
                             color: AppColors.secondaryColor,
                           ),

@@ -170,7 +170,7 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future addUserData({required UserEntity userEntity}) async {
     await fireDataBaseService.addData(
-      jsonData: userEntity.toMap(),
+      jsonData: UserModel.fromEntity(userEntity).toMap(),
       path: BackEndPointsPaths.addUsersData,
       docId: userEntity.userId,
     );
@@ -183,5 +183,11 @@ class AuthRepoImpl extends AuthRepo {
       docId: userId,
     );
     return UserModel.fromJson(userData);
+  }
+  
+  @override
+  Future saveUserData({required UserModel userModel}) {
+   
+    throw UnimplementedError();
   }
 }

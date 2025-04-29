@@ -3,9 +3,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:souq_app/constants.dart';
 import 'package:souq_app/core/helper_functions/excution_navigator.dart';
 import 'package:souq_app/core/helper_functions/localization_lan_checker.dart';
+import 'package:souq_app/core/services/fire_base_auth_service.dart';
+import 'package:souq_app/core/services/service_locator.dart';
 import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/assets_paths.dart';
 import 'package:souq_app/features/authentication_feature/presentation/views/login_view.dart';
+import 'package:souq_app/features/home_feature/presentation/views/home_view.dart';
 import 'package:souq_app/features/on_boarding_feature/presentation/views/on_boarding_view.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -22,7 +25,12 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       kIsOnBoardingViewSeen,
     );
     if (isOnBoardingViewSeen) {
-      executionPushReplacmentNamedNavigator(context, LoginView.routeName, 2);
+      var isUserSignedIn = serviceLocator<FireBaseAuthService>().isUserSignedIn();
+      if (isUserSignedIn) {
+        executionPushReplacmentNamedNavigator(context, HomeView.routeName, 2);
+      } else {
+        executionPushReplacmentNamedNavigator(context, LoginView.routeName, 2);
+      }
     } else {
       executionPushReplacmentNamedNavigator(
         context,
