@@ -5,7 +5,7 @@ import 'package:souq_app/features/authentication_feature/data/models/user_model.
 import 'package:souq_app/features/authentication_feature/domain/entities/user_entity.dart';
 
 UserEntity getUserData(){
-var jsonString = SharedPreferencesService.getString(kUserData) ?? '' ;
+var jsonString = SharedPreferencesService.getString(kUserData) ;
 var userEntity = UserModel.fromJson(jsonDecode(jsonString));
 return userEntity;
 }

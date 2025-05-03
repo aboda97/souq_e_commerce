@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,7 +29,7 @@ class SouqApp extends StatelessWidget {
   @override
 
   Widget build(BuildContext context) {
-    log(MediaQuery.of(context).size.width);
+    print('Width Size: ${MediaQuery.of(context).size.width}');
 
     return BlocProvider(
       create: (context) => serviceLocator<LanguageCubit>()..loadSavedLanguage(),
@@ -50,8 +48,8 @@ class SouqApp extends StatelessWidget {
             supportedLocales: S.delegate.supportedLocales,
             title: 'Souq App',
             onGenerateRoute: onGenerateRoute,
-            // initialRoute: SplashView.routeName,
-            initialRoute: HomeView.routeName,
+             initialRoute: SplashView.routeName,
+            //initialRoute: HomeView.routeName,
            // initialRoute: BestSellingView.routeName,
            // initialRoute: SearchView.routeName,
           );

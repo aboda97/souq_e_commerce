@@ -23,8 +23,8 @@ class CustomHomeAppBar extends StatelessWidget {
       ),
       leading: Image.asset(AssetsPaths.appProfileImgPath),
       title: Text(S.of(context).goodMorning, style: TextStyles.regular16),
-      subtitle: Text(getUserData().userName, style: TextStyles.bold16),
-    //  subtitle: Text(S.of(context).userProfileName, style: TextStyles.bold16),
+     // subtitle: Text(getUserData().userName, style: TextStyles.bold16),
+     subtitle: Text(S.of(context).userProfileName, style: TextStyles.bold16),
     );
   }
 }

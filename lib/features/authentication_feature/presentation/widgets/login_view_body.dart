@@ -111,6 +111,7 @@ import 'package:souq_app/core/utils/assets_paths.dart';
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_in_cubit/login_cubit.dart';
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_in_cubit/login_states.dart';
 import 'package:souq_app/features/authentication_feature/presentation/views/register_view.dart';
+import 'package:souq_app/features/home_feature/presentation/views/home_view.dart';
 import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 import 'package:souq_app/generated/l10n.dart';
 
@@ -131,7 +132,9 @@ class LoginViewBody extends StatelessWidget {
             S.of(context).snackBarSuccessAlert,
             AppColors.primaryColor,
           );
-          executionPushReplacmentNamedNavigator(context, TestView.routeName, 0);
+      //    executionPushReplacmentNamedNavigator(context, TestView.routeName, 0);
+      executionPushReplacmentNamedNavigator(context, HomeView.routeName, 0);
+
         } else if (state is LoginFailure) {
           showSnackBar(context, state.failure.errMsg, Colors.red);
         }

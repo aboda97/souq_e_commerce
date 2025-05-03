@@ -12,6 +12,7 @@ import 'package:souq_app/features/authentication_feature/presentation/manager/si
 import 'package:souq_app/features/authentication_feature/presentation/manager/sign_up_cubit/register_state.dart';
 import 'package:souq_app/features/authentication_feature/presentation/views/login_view.dart';
 import 'package:souq_app/features/authentication_feature/presentation/widgets/build_agreement_check_box.dart';
+import 'package:souq_app/features/home_feature/presentation/views/home_view.dart';
 import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 import 'package:souq_app/generated/l10n.dart';
 
@@ -32,7 +33,8 @@ class RegisterViewBody extends StatelessWidget {
             S.of(context).snackBarSuccessAlert,
             AppColors.primaryColor,
           );
-          executionPushReplacmentNamedNavigator(context, TestView.routeName, 0);
+        //  executionPushReplacmentNamedNavigator(context, TestView.routeName, 0);
+          executionPushReplacmentNamedNavigator(context, HomeView.routeName, 0);
         } else if (state is RegisterFailure) {
           showSnackBar(context, state.failure.errMsg, Colors.red);
         }
