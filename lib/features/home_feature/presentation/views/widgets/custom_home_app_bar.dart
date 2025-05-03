@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:souq_app/core/helper_functions/get_user_data.dart';
 import 'package:souq_app/core/utils/app_colors.dart';
 import 'package:souq_app/core/utils/app_styles.dart';
 import 'package:souq_app/core/utils/assets_paths.dart';
@@ -22,7 +23,8 @@ class CustomHomeAppBar extends StatelessWidget {
       ),
       leading: Image.asset(AssetsPaths.appProfileImgPath),
       title: Text(S.of(context).goodMorning, style: TextStyles.regular16),
-      subtitle: Text(S.of(context).userProfileName, style: TextStyles.bold16),
+      subtitle: Text(getUserData().userName, style: TextStyles.bold16),
+    //  subtitle: Text(S.of(context).userProfileName, style: TextStyles.bold16),
     );
   }
 }

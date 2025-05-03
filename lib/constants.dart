@@ -6,3 +6,4 @@ const kIsOnBoardingViewSeen = 'isOnBoardingViewSeen';
 const kArabicLang = 'ar';
 const kEnglishLang = 'en';
 const kAppLanguage = 'AppLanguage';
+const kUserData = 'UserData';

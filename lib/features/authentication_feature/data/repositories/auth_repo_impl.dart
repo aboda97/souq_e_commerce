@@ -1,10 +1,14 @@
+import 'dart:convert';
+
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:souq_app/constants.dart';
 import 'package:souq_app/core/errors/auth_fire_base_exceptions.dart';
 import 'package:souq_app/core/errors/custom_exception.dart';
 import 'package:souq_app/core/errors/failure.dart';
 import 'package:souq_app/core/services/fire_base_auth_service.dart';
 import 'package:souq_app/core/services/fire_data_base_service.dart';
+import 'package:souq_app/core/services/shared_preferences.dart';
 import 'package:souq_app/core/utils/back_end_points_paths.dart';
 import 'package:souq_app/features/authentication_feature/data/models/user_model.dart';
 import 'package:souq_app/features/authentication_feature/domain/entities/user_entity.dart';
@@ -78,6 +82,7 @@ class AuthRepoImpl extends AuthRepo {
         return left(ServerFailure(S.current.unexpectedError));
       }
       var userEntity = await getUserData(userId: userLogin.uid);
+      await saveUserData(userEntity: userEntity);
      
       // return right(UserModel.fromFireBaseUser(userLogin));
       return right(userEntity);
@@ -186,8 +191,9 @@ class AuthRepoImpl extends AuthRepo {
   }
   
   @override
-  Future saveUserData({required UserModel userModel}) {
+  Future saveUserData({required UserEntity userEntity}) async{
    
-    throw UnimplementedError();
+    var jsonData = jsonEncode( UserModel.fromEntity(userEntity).toMap());
+    await SharedPreferencesService.setString(kUserData, jsonData);
   }
 }
