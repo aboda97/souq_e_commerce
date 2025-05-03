@@ -12,6 +12,7 @@ import 'package:souq_app/features/best_selling_feature/presentation/views/best_s
 import 'package:souq_app/features/home_feature/presentation/views/home_view.dart';
 import 'package:souq_app/features/search_feature/presentation/views/search_view.dart';
 import 'package:souq_app/features/splash_feature/presentation/views/splash_view.dart';
+import 'package:souq_app/features/test_localization_feature/presentation/views/test.dart';
 import 'package:souq_app/firebase_options.dart';
 import 'package:souq_app/generated/l10n.dart';
 
@@ -52,6 +53,7 @@ class SouqApp extends StatelessWidget {
             //initialRoute: HomeView.routeName,
            // initialRoute: BestSellingView.routeName,
            // initialRoute: SearchView.routeName,
+           
           );
         },
       ),
