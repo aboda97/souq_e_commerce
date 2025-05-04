@@ -8,5 +8,5 @@ abstract class AppColors {
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color outLineBorderTxtFormField = Color(0xFFE6E9E9);
   static const Color appBgColor = Color(0xFFEEF8ED);
-  static const Color appCardGeryBgColor = Color.fromARGB(255, 150, 150, 150);
+  static const Color appCardGeryBgColor = Color(0xFFF3F5F7);
 }
